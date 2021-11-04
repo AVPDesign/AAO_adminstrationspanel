@@ -74,3 +74,29 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+body {
+}
+
+/* CSS for "Opret Tur" */
+.wrapper {
+    width: 100%;
+    background-color: red;
+    display: block;
+}
+
+.collumn1 {
+    width: 33.333%;
+    background-color: green;
+    float: left;
+}
+
+.collumn2 {
+    width: 66.666%;
+    background-color: blue;
+    float: right;
+}
+
+flex {
+    flex: auto;
+}
