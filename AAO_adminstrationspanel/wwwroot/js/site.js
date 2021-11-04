@@ -4,5 +4,5 @@
 // Write your JavaScript code.
 
 function openTableColunm() {
-    document.getElementById("tableToOpen").style.display="block";
+    document.getElementById("tableToOpen").style.display="revert";
 }

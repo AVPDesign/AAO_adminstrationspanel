@@ -1,15 +1,21 @@
-﻿/* BUTTON */
+﻿/* *** */
+
+:root {
+    --aao-green: #1b8416;
+}
+
+/* BUTTONs */
 
 .buttonNavigation{
     display: flex;
     justify-content: space-between;
 }
 
- .buttonNavigation button, .buttonNavigation button:hover, .buttonNavigation button:focus{
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
     background: none;
     border: none;
     color: black;
- }
+}
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
     background: none;
@@ -26,24 +32,55 @@ button {
     margin: 25px 0;
 }
 
-/* TABLE */
+.greenButton, .redButton, .greyButton{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    padding: 0 25px;
+    text-align: center;
+    width: auto;
+}
 
-table{
+.greenButton {
+    background: var(--aao-green);
+}
+
+.redButton {
     background: red;
-    height: 50vh;
+}
+
+.greyButton {
+    background: grey;
+}
+
+#newTrip:active {
+    border: none;
+}
+
+/* TABLE */
+table {
     width: 100%;
 }
 
 table tr{
-    background: red;
     height: 50px;
     width: 300px;
+}
+
+table, th, td {
+    border: 1px solid black;
 }
 
 .columnHeading{
     text-align: center;
 }
 
-table, th, td {
-    border: 1px solid black;
+/* TABLE - TableInTable*/
+#tableToOpen{
+    align-items: center;
+    height: 350px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }

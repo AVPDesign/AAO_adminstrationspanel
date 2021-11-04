@@ -41,30 +41,61 @@
         <th class="columnHeading">Status</th>
     </tr>
     <tr>
-        <div>
-            <td onclick="openTableColunm()">
-                <div id="tableToOpen" style="display:none">
-                    <table>
-                        <tr>
-                            <th>Navn</th>
-                            <th>Tlf.-nr.</th>
-                            <th>Mail</th>
-                            <th>Kørekorttype</th>
-                            <th>Vælg chauffør</th>
-                        </tr>
-                    </table>
-                    <button>Godkend chauffør</button>
-                    <button>Slet tur</button>
-                    <button>Rediger tur</button>
+        <td onclick="openTableColunm()"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr id="tableToOpen" style="display:none">
+        <td colspan="100%" style="padding:25px">
+            <div>
+                <table>
+                    <tr>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                        <th class="columnHeading">Vælg chauffør</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="buttonNavigation">
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="redButton">Slet tur</button>
+                    <button class="greyButton">Rediger tur</button>
                 </div>
-            </td>
-        </div>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+            </div>
+        </td>
     </tr>
     <tr>
         <td></td>
@@ -122,4 +153,4 @@
     </tr>
 </table>
 
-<button>Opret ny tur</button>
+<button class="greenButton" onclick="location.href = 'OpretTur';">Opret ny tur</button>
