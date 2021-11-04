@@ -1,3 +1,13 @@
-﻿btn btn-primary dropdown-toggle{
+﻿btn btn-primary dropdown-toggle{}
 
+table{
+    background: red;
+    height: 50vh;
+    width: 100%;
+}
+
+table tr{
+    background: red;
+    height: 50px;
+    width: 300px;
 }
