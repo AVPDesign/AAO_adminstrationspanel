@@ -19,26 +19,39 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li><a href="#">Startdato</a></li>
-        <li><a href="#">Slutdato</a></li>
-        <li><a href="#">Starttid</a></li>
-        <li><a href="#">Varighed</a></li>
-        <li><a href="#">Trafik</a></li>
-        <li><a href="#">Afdeling</a></li>
-        <li><a href="#">Status</a></li>
+        <li><a href="#">Navn</a></li>
+        <li><a href="#">Tlf Nr</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Kørekort information</a></li>
     </ul>
 </div>
 <table>
     <tr>
-        <th>Startdato</th>
-        <th>Slutdato</th>
-        <th>Starttid</th>
-        <th>Varighed</th>
-        <th>Trafik</th>
-        <th>Afdeling</th>
-        <th>Status</th>
+        <th>Navn</th>
+        <th>Tlf Nr</th>
+        <th>Email</th>
+        <th>Kørekort information</th>
     </tr>
     <tr>
+        <td onclick="openTable()">
+            <table id="tableToOpen" display="none">
+                <tr>
+                    <th>Startdato</th>
+                    <th>Slutdato</th>
+                    <th>Starttid</th>
+                    <th>Ledige og optagede perioder</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <button>Tildel tur</button>
+            <button>Opret perioder</button>
+            <button>Godkend ændringer</button>
+        </td>
         <td></td>
         <td></td>
         <td></td>
