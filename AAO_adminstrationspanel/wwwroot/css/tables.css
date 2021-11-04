@@ -11,3 +11,7 @@ table tr{
     height: 50px;
     width: 300px;
 }
+
+.columnHeading{
+    text-align: center;
+}
