@@ -39,20 +39,24 @@
         <th>Status</th>
     </tr>
     <tr>
-        <td onclick="openTableColunm()">
-            <table id="tableToOpen" display="none">
-                <tr>
-                    <th>Navn</th>
-                    <th>Tlf.-nr.</th>
-                    <th>Mail</th>
-                    <th>Kørekorttype</th>
-                    <th>Vælg chauffør</th>
-                </tr>
-            </table>
-            <button>Godkend chauffør</button>
-            <button>Slet tur</button>
-            <button>Rediger tur</button>
-        </td>
+        <div>
+            <td onclick="openTableColunm()">
+                <div id="tableToOpen" style="display:none">
+                    <table>
+                        <tr>
+                            <th>Navn</th>
+                            <th>Tlf.-nr.</th>
+                            <th>Mail</th>
+                            <th>Kørekorttype</th>
+                            <th>Vælg chauffør</th>
+                        </tr>
+                    </table>
+                    <button>Godkend chauffør</button>
+                    <button>Slet tur</button>
+                    <button>Rediger tur</button>
+                </div>
+            </td>
+        </div>
         <td></td>
         <td></td>
         <td></td>
@@ -117,4 +121,3 @@
 </table>
 
 <button>Opret ny tur</button>
-
