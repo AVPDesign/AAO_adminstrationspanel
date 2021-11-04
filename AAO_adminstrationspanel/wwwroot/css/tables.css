@@ -1,4 +1,32 @@
-﻿btn btn-primary dropdown-toggle{}
+﻿/* BUTTON */
+
+.buttonNavigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .buttonNavigation button, .buttonNavigation button:hover, .buttonNavigation button:focus{
+    background: none;
+    border: none;
+    color: black;
+ }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background: none;
+    border: none;
+    color: black;
+}
+
+.dropdown-menu a{
+    color: black;
+    margin: 0 0 20px 10px;
+}
+
+button {
+    margin: 25px 0;
+}
+
+/* TABLE */
 
 table{
     background: red;
