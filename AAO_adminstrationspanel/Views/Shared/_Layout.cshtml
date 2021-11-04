@@ -8,18 +8,72 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
-            <div class="nav-left">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 box-shadow vh-100">
+                    <img src="~/image/axlogo.png" class="img_logo d-flex justify-content-center" />
+                    <nav class="nav flex-column">
+                        <ul>
+                            <li class="nav-item ">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AlleTure">
+                                    <img src="~/image/icon/alleture.png" width="25" height="20" style="margin: 8px;" />
+                                    Alle ture
+                                    <img src="~/image/icon/arrow.svg" class="img-arrow" />
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TildelteTure">
+                                    <img src="~/image/icon/tildelteture2.png" class="img-icon" />
+                                    Tildelte ture
+                                    <img src="~/image/icon/arrow.svg" class="img-arrow" />
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AfloserOversigt">
+                                    <img src="~/image/icon/afloseroversigt2.png" class="img-icon" />
+                                    Afløser oversigt
+                                    <img src="~/image/icon/arrow.svg" class="img-arrow" />
+                                </a>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="OpretTur">
+                                    <img src="~/image/icon/opret.png" class="img-icon" />
+                                Opret tur</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-start">
+                                <a class="nav-link nav-bottom">
+                                    <img src="~/image/icon/minimere.png" class="img-icon" />
+                                    Minimere menu
+                                    <img src="~/image/icon/arrow-left.svg" class="img-arrow" />
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-10 d-flex justify-content-start pl-5">
+                    <main role="main" class="main">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="nav-left">-->
                 @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AAO_adminstrationspanel</a>*@
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="p-3 text-dark box-shadow full-height">
-                    
-                        <ul class="navbar-nav d-flex flex-column bd-highlight">
-                            <img src="~/image/axlogo.png" class="img_logo" />
+                        <ul class="navbar-nav d-flex flex-column">
+                            
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OpretTur">Opret tur</a>
                             </li>
@@ -34,21 +88,31 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-               
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+                </div>-->
+
+        @*</nav>*@
+
+
+    @*<div class="container-fluid">
+        <div class="row">
+            <div class="col-6 bg-info">
+                <main role="main" class="main">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>*@
+
+
+
+
 
     @*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - AAO_adminstrationspanel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>*@
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
