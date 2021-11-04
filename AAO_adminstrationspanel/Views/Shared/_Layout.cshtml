@@ -9,18 +9,17 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
-            <div class="container">
-
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="nav-left">
                 @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AAO_adminstrationspanel</a>*@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="p-3 mb-2 bg-info text-dark">
-                    <img src="~/image/logo.png"/>
-                    <div class="row">
-                        <ul class="navbar-nav d-flex flex-column bd-highlight mb-3">
+                <div class="p-3 text-dark box-shadow full-height">
+                    
+                        <ul class="navbar-nav d-flex flex-column bd-highlight">
+                            <img src="~/image/axlogo.png" class="img_logo" />
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OpretTur">Opret tur</a>
                             </li>
@@ -36,7 +35,7 @@
                         </ul>
                     </div>
                 </div>
-               </div>
+               
         </nav>
     </header>
     <div class="container">
