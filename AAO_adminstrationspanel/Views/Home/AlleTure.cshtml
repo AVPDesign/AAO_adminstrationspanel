@@ -2,63 +2,100 @@
     ViewData["Title"] = "Alle Ture";
 }
 <h1>@ViewData["Title"]</h1>
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Dropdown Example
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Odense</a></li>
-        <li><a href="#">Nationalt</a></li>
-        <li><a href="#">Ledigt</a></li>
-    </ul>
-</div>
-<div class="dropdownKolonne">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Dropdown Example
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Startdato</a></li>
-        <li><a href="#">Slutdato</a></li>
-        <li><a href="#">Starttid</a></li>
-        <li><a href="#">Varighed</a></li>
-        <li><a href="#">Trafik</a></li>
-        <li><a href="#">Afdeling</a></li>
-        <li><a href="#">Status</a></li>
-    </ul>
+<div class="buttonNavigation">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Filter
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Odense</a></li>
+            <li><a href="#">Nationalt</a></li>
+            <li><a href="#">Ledigt</a></li>
+        </ul>
+    </div>
+    <div class="dropdownKolonne">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Vis/skjul kolonner
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Startdato</a></li>
+            <li><a href="#">Slutdato</a></li>
+            <li><a href="#">Starttid</a></li>
+            <li><a href="#">Varighed</a></li>
+            <li><a href="#">Trafik</a></li>
+            <li><a href="#">Afdeling</a></li>
+            <li><a href="#">Status</a></li>
+        </ul>
+    </div>
 </div>
 <table>
     <tr>
-        <th>Startdato</th>
-        <th>Slutdato</th>
-        <th>Starttid</th>
-        <th>Varighed</th>
-        <th>Trafik</th>
-        <th>Afdeling</th>
-        <th>Status</th>
+        <th class="columnHeading">Startdato</th>
+        <th class="columnHeading">Slutdato</th>
+        <th class="columnHeading">Starttid</th>
+        <th class="columnHeading">Varighed</th>
+        <th class="columnHeading">Trafik</th>
+        <th class="columnHeading">Afdeling</th>
+        <th class="columnHeading">Status</th>
     </tr>
     <tr>
-        <td onclick="openTable()">
-            <table id="tableToOpen" display="none">
-                <tr>
-                    <th>Navn</th>
-                    <th>Tlf.-nr.</th>
-                    <th>Mail</th>
-                    <th>Kørekorttype</th>
-                    <th>Vælg chauffør</th>
-                </tr>
-            </table>
-            <button>Godkend chauffør</button>
-            <button>Slet tur</button>
-            <button>Rediger tur</button>
+        <td onclick="openTableColunm()"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr id="tableToOpen" style="display:none">
+        <td colspan="100%" style="padding:25px">
+            <div>
+                <table>
+                    <tr>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                        <th class="columnHeading">Vælg chauffør</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="buttonNavigation">
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="redButton">Slet tur</button>
+                    <button class="greyButton">Rediger tur</button>
+                </div>
+            </div>
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td></td>
@@ -116,5 +153,4 @@
     </tr>
 </table>
 
-<button>Opret ny tur</button>
-
+<button class="greenButton" onclick="location.href = 'OpretTur';">Opret ny tur</button>

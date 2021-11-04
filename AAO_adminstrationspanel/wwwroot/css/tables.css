@@ -1,0 +1,86 @@
+﻿/* *** */
+
+:root {
+    --aao-green: #1b8416;
+}
+
+/* BUTTONs */
+
+.buttonNavigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    background: none;
+    border: none;
+    color: black;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background: none;
+    border: none;
+    color: black;
+}
+
+.dropdown-menu a{
+    color: black;
+    margin: 0 0 20px 10px;
+}
+
+button {
+    margin: 25px 0;
+}
+
+.greenButton, .redButton, .greyButton{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    padding: 0 25px;
+    text-align: center;
+    width: auto;
+}
+
+.greenButton {
+    background: var(--aao-green);
+}
+
+.redButton {
+    background: red;
+}
+
+.greyButton {
+    background: grey;
+}
+
+#newTrip:active {
+    border: none;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+}
+
+table tr{
+    height: 50px;
+    width: 300px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.columnHeading{
+    text-align: center;
+}
+
+/* TABLE - TableInTable*/
+#tableToOpen{
+    align-items: center;
+    height: 350px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
