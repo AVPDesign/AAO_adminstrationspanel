@@ -2,58 +2,88 @@
     ViewData["Title"] = "Afløser Oversigt";
 }
 <h1>@ViewData["Title"]</h1>
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Dropdown Example
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Odense</a></li>
-        <li><a href="#">Nationalt</a></li>
-        <li><a href="#">Ledigt</a></li>
-    </ul>
-</div>
-<div class="dropdownKolonne">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Dropdown Example
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Navn</a></li>
-        <li><a href="#">Tlf Nr</a></li>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Kørekort information</a></li>
-    </ul>
+<div class="buttonNavigation">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Filter
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Odense</a></li>
+            <li><a href="#">Nationalt</a></li>
+            <li><a href="#">Ledigt</a></li>
+        </ul>
+    </div>
+    <div class="dropdownKolonne">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Vis/skjul kolonner
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Navn</a></li>
+            <li><a href="#">Tlf Nr</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Kørekort information</a></li>
+        </ul>
+    </div>
 </div>
 <table>
     <tr>
-        <th>Navn</th>
-        <th>Tlf Nr</th>
-        <th>Email</th>
-        <th>Kørekort information</th>
+        <th class="columnHeading">Navn</th>
+        <th class="columnHeading">Tlf Nr</th>
+        <th class="columnHeading">Email</th>
+        <th class="columnHeading">Kørekort information</th>
     </tr>
     <tr>
-        <td onclick="openTable()">
-            <table id="tableToOpen" display="none">
-                <tr>
-                    <th>Startdato</th>
-                    <th>Slutdato</th>
-                    <th>Starttid</th>
-                    <th>Ledige og optagede perioder</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-            <button>Tildel tur</button>
-            <button>Opret perioder</button>
-            <button>Godkend ændringer</button>
+        <td onclick="openTableColunm()"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr id="tableToOpen" style="display:none">
+        <td colspan="100%" style="padding:25px">
+            <div>
+                <table>
+                    <tr>
+                        <th class="columnHeading">Startdato</th>
+                        <th class="columnHeading">Slutdato</th>
+                        <th class="columnHeading">Starttid</th>
+                        <th class="columnHeading">Ledige og optagede perioder</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="buttonNavigation">
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="redButton">Slet tur</button>
+                    <button class="greyButton">Rediger tur</button>
+                </div>
+            </div>
         </td>
-        <td></td>
-        <td></td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -64,23 +94,8 @@
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -91,23 +106,14 @@
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
