@@ -6,8 +6,10 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\image\" />
+    <Content Remove="wwwroot\image\icon\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\image\" />
+    <Folder Include="wwwroot\image\icon\" />
   </ItemGroup>
 </Project>

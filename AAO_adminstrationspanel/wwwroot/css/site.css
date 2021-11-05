@@ -1,79 +1,211 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.nav-pills, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    list-style: none;
+}
+
+.nav-link.active {
+    background-color: #00904A;
+    border-radius: 8px;
+    margin: 10px 10px;
+    color: white;
+}
+
+ul, li {
+    list-style-type: none;
+    height: auto;
+    width: 100%;
 }
 
 
 /* Nav styles
 -------------------------------------------------- */
+.nav-bottom {
+    bottom: 0;
+}
 
+
+/* Image styles
+-------------------------------------------------- */
+.img_logo {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.img-icon {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.img-arrow {
+/*    background-color: yellow;*/
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.3);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    /*  margin-bottom: 60px;*/
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
+
+
+
+
+/* tables styles
+-------------------------------------------------- */
+
+:root {
+    --aao-green: #1b8416;
+}
+
+/* BUTTONs */
+
+.buttonNavigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    background: none;
+    border: none;
+    color: black;
+}
+
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+        background: none;
+        border: none;
+        color: black;
+    }
+
+.dropdown-menu a {
+    color: black;
+    margin: 0 0 20px 10px;
+}
+
+button {
+    margin: 25px 0;
+}
+
+.greenButton, .redButton, .greyButton {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    padding: 0 25px;
+    text-align: center;
+    width: auto;
+}
+
+.greenButton {
+    background: var(--aao-green);
+}
+
+.redButton {
+    background: red;
+}
+
+.greyButton {
+    background: grey;
+}
+
+#newTrip:active {
+    border: none;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+}
+
+    table tr {
+        height: 50px;
+        width: 300px;
+    }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.columnHeading {
+    text-align: center;
+}
+
+/* TABLE - TableInTable*/
+#tableToOpen {
+    align-items: center;
+    height: 350px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 
 body {
 }
