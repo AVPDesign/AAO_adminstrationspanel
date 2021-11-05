@@ -1,19 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-*{
-=======
 * {
->>>>>>> Stashed changes
-=======
-* {
->>>>>>> Stashed changes
-=======
-* {
->>>>>>> Stashed changes
     margin: 0;
     padding: 0;
 }
@@ -36,29 +24,10 @@ a {
 }
 
 .nav-pills, .nav-pills .show > .nav-link {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-  list-style: none;
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
     list-style: none;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }
 
 .nav-link.active {
@@ -77,16 +46,6 @@ ul, li {
 
 /* Nav styles
 -------------------------------------------------- */
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-.nav-bottom{
-=======
-.nav-bottom {
->>>>>>> Stashed changes
-    bottom: 0;
-}
-=======
 .nav-bottom {
     bottom: 0;
 }
@@ -104,53 +63,9 @@ ul, li {
     height: 20px;
     margin: 10px;
 }
->>>>>>> Stashed changes
 
 .img-arrow {
 /*    background-color: yellow;*/
-}
-=======
-.nav-bottom {
-    bottom: 0;
-}
-
->>>>>>> Stashed changes
-
-/* Image styles
--------------------------------------------------- */
-.img_logo {
-    width: 40%;
-    margin: 20px auto;
-}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-
-.img-icon {
-    width: 20px;
-    height: 20px;
-    margin: 10px;
-}
-
-<<<<<<< Updated upstream
-.img-arrow{
-    background-color: yellow;
-=======
-
-.img-icon {
-    width: 20px;
-    height: 20px;
-    margin: 10px;
-}
-
-.img-arrow {
-/*    background-color: yellow;*/
->>>>>>> Stashed changes
-=======
-.img-arrow {
-/*    background-color: yellow;*/
->>>>>>> Stashed changes
 }
 
 /* Sticky footer styles
@@ -174,19 +89,7 @@ html {
 }
 
 .box-shadow {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.3);
-=======
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.3);
->>>>>>> Stashed changes
-=======
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.3);
->>>>>>> Stashed changes
-=======
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.3);
->>>>>>> Stashed changes
 }
 
 button.accept-policy {
@@ -202,23 +105,8 @@ html {
 }
 
 body {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  /* Margin bottom by footer height */
-/*  margin-bottom: 60px;*/
-=======
     /* Margin bottom by footer height */
     /*  margin-bottom: 60px;*/
->>>>>>> Stashed changes
-=======
-    /* Margin bottom by footer height */
-    /*  margin-bottom: 60px;*/
->>>>>>> Stashed changes
-=======
-    /* Margin bottom by footer height */
-    /*  margin-bottom: 60px;*/
->>>>>>> Stashed changes
 }
 
 .footer {
@@ -237,91 +125,6 @@ body {
 
 :root {
     --aao-green: #1b8416;
-<<<<<<< Updated upstream
-}
-
-/* BUTTONs */
-
-.buttonNavigation {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-primary, .btn-primary:hover, .btn-primary:focus {
-    background: none;
-    border: none;
-    color: black;
-}
-
-    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-        background: none;
-        border: none;
-        color: black;
-    }
-
-.dropdown-menu a {
-    color: black;
-    margin: 0 0 20px 10px;
-}
-
-button {
-    margin: 25px 0;
-}
-
-.greenButton, .redButton, .greyButton {
-    border: none;
-    border-radius: 10px;
-    color: white;
-    height: 50px;
-    padding: 0 25px;
-    text-align: center;
-    width: auto;
-}
-
-.greenButton {
-    background: var(--aao-green);
-<<<<<<< Updated upstream
-}
-
-.redButton {
-    background: red;
-}
-
-.greyButton {
-    background: grey;
-}
-
-#newTrip:active {
-    border: none;
-}
-
-/* TABLE */
-table {
-    width: 100% !important;
-}
-
-=======
-}
-
-.redButton {
-    background: red;
-}
-
-.greyButton {
-    background: grey;
-}
-
-#newTrip:active {
-    border: none;
-}
-
-/* TABLE */
-table {
-    width: 100% !important;
-}
-
->>>>>>> Stashed changes
-=======
 }
 
 /* BUTTONs */
@@ -380,10 +183,9 @@ button {
 
 /* TABLE */
 table {
-    width: 100% !important;
+    width: 100%;
 }
 
->>>>>>> Stashed changes
     table tr {
         height: 50px;
         width: 300px;

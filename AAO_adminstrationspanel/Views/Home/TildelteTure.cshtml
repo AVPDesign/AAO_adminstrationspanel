@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Alle Ture";
+    ViewData["Title"] = "Tildelte Ture";
 }
 <h1>@ViewData["Title"]</h1>
 <div class="buttonNavigation">
@@ -26,7 +26,7 @@
             <li><a href="#">Varighed</a></li>
             <li><a href="#">Trafik</a></li>
             <li><a href="#">Afdeling</a></li>
-            <li><a href="#">Status</a></li>
+            <li><a href="#">Navn</a></li>
         </ul>
     </div>
 </div>
@@ -38,7 +38,7 @@
         <th class="columnHeading">Varighed</th>
         <th class="columnHeading">Trafik</th>
         <th class="columnHeading">Afdeling</th>
-        <th class="columnHeading">Status</th>
+        <th class="columnHeading">Navn</th>
     </tr>
     <tr>
         <td onclick="openTableColunm()"></td>
@@ -53,44 +53,10 @@
         <td colspan="100%" style="padding:25px">
             <div>
                 <table>
-                    <tr>
-                        <th class="columnHeading">Navn</th>
-                        <th class="columnHeading">Tlf.-nr.</th>
-                        <th class="columnHeading">Mail</th>
-                        <th class="columnHeading">Kørekorttype</th>
-                        <th class="columnHeading">Vælg chauffør</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <h2 style="margin-bottom:50px;">Info om tur</h2>
                 </table>
                 <div class="buttonNavigation">
-                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="redButton">Fjern chauffør</button>
                     <button class="redButton">Slet tur</button>
                     <button class="greyButton">Rediger tur</button>
                 </div>
@@ -152,5 +118,3 @@
         <td></td>
     </tr>
 </table>
-
-<button class="greenButton" onclick="location.href = 'OpretTur';">Opret ny tur</button>
