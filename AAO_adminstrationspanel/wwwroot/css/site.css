@@ -81,22 +81,56 @@ body {
 /* CSS for "Opret Tur" */
 .wrapper {
     width: 100%;
-    background-color: red;
     display: block;
 }
 
 .collumn1 {
     width: 33.333%;
-    background-color: green;
-    float: left;
 }
 
 .collumn2 {
     width: 66.666%;
-    background-color: blue;
-    float: right;
 }
 
-flex {
-    flex: auto;
+.collumn3 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.input{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+label, input, select{
+    display: block;
+    width: 80%;
+}
+
+input, select{
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.width50{
+    width: 50%;
+}
+
+#Duration{
+    width: 60%;
+    float: left;
+}
+
+#DaysOrHours{
+    width: 20%;
+}
+
+#Description{
+    width: 90%;
+    height: 123px;
 }
