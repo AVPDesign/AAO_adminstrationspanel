@@ -40,6 +40,7 @@ ul, li {
     width: 100%;
 }
 
+
 .minimere {
     position: absolute;
     bottom: 0;
@@ -59,6 +60,7 @@ ul, li {
     bottom: 0;
 }
 
+
 .center-text {
     margin: 2% 10%;
 }
@@ -69,9 +71,9 @@ ul, li {
     align-items: center;
 }
 
-nav-item a {
-    text-align: left;
-}
+  nav-item a {
+        text-align: left;
+    }
 
 .nav-item-minimere {
     position: absolute;
@@ -243,9 +245,8 @@ table, th, td {
     justify-content: center;
     position: relative;
     width: 100%;
-    body
 
-{
+body {
 }
 
 /* CSS for "Opret Tur" */
@@ -270,22 +271,29 @@ table, th, td {
     display: flex;
 }
 
-.input {
+
+.input{
+
     display: block;
     float: left;
     width: 100%;
 }
 
+
 label, input, select {
+
     display: block;
     width: 80%;
 }
 
+
 input, select {
+
     height: 35px;
     padding: 5px;
     margin-bottom: 20px;
 }
+
 
 .width50 {
     width: 50%;
@@ -296,6 +304,7 @@ input, select {
     float: left;
 }
 
+
 #DaysOrHours {
     width: 20%;
 }
@@ -304,3 +313,4 @@ input, select {
     width: 90%;
     height: 123px;
 }
+
