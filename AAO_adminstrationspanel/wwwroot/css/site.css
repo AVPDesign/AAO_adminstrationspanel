@@ -23,18 +23,15 @@ a {
     border-color: #1861ac;
 }
 
-.nav-pills, .nav-pills .show > .nav-link {
+.nav-pills, .nav-pills .show {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
     list-style: none;
 }
 
-.nav-link.active {
-    background-color: #00904A;
-    border-radius: 8px;
-    margin: 10px 10px;
-    color: white;
+.nav-link {
+    padding: .5rem 0.5rem;
 }
 
 ul, li {
@@ -43,6 +40,18 @@ ul, li {
     width: 100%;
 }
 
+.minimere {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3%;
+}
+
+.active {
+    background-color: #00904A;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0px;
+}
 
 /* Nav styles
 -------------------------------------------------- */
@@ -50,23 +59,51 @@ ul, li {
     bottom: 0;
 }
 
+.center-text {
+    margin: 2% 10%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+nav-item a {
+    text-align: left;
+}
+
+.nav-item-minimere {
+    position: absolute;
+    background-color: pink;
+    width: 95%;
+    bottom: 0;
+}
+
+.logo_text {
+    justify-content: center;
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
 
 /* Image styles
 -------------------------------------------------- */
 .img_logo {
     width: 40%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .img-icon {
     width: 20px;
     height: 20px;
-    margin: 10px;
 }
 
-.img-arrow {
-/*    background-color: yellow;*/
+.img-icon-active {
+    padding-right: 10%;
+    display: flex;
+    justify-content: center;
 }
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -206,4 +243,64 @@ table, th, td {
     justify-content: center;
     position: relative;
     width: 100%;
+    body
+
+{
+}
+
+/* CSS for "Opret Tur" */
+.wrapper {
+    width: 100%;
+    display: block;
+}
+
+.collumn1 {
+    width: 33.333%;
+}
+
+.collumn2 {
+    width: 66.666%;
+}
+
+.collumn3 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.input {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+label, input, select {
+    display: block;
+    width: 80%;
+}
+
+input, select {
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.width50 {
+    width: 50%;
+}
+
+#Duration {
+    width: 60%;
+    float: left;
+}
+
+#DaysOrHours {
+    width: 20%;
+}
+
+#Description {
+    width: 90%;
+    height: 123px;
 }
