@@ -40,7 +40,8 @@ ul, li {
     width: 100%;
 }
 
-.minimere{
+
+.minimere {
     position: absolute;
     bottom: 0;
     margin-bottom: 3%;
@@ -59,15 +60,17 @@ ul, li {
     bottom: 0;
 }
 
-.center-text{
+
+.center-text {
     margin: 2% 10%;
 }
 
-.nav-item{
+.nav-item {
     display: flex;
     justify-content: left;
     align-items: center;
 }
+
   nav-item a {
         text-align: left;
     }
@@ -268,37 +271,46 @@ body {
     display: flex;
 }
 
+
 .input{
+
     display: block;
     float: left;
     width: 100%;
 }
 
-label, input, select{
+
+label, input, select {
+
     display: block;
     width: 80%;
 }
 
-input, select{
+
+input, select {
+
     height: 35px;
     padding: 5px;
     margin-bottom: 20px;
 }
 
-.width50{
+
+.width50 {
     width: 50%;
 }
 
-#Duration{
+#Duration {
     width: 60%;
     float: left;
 }
 
-#DaysOrHours{
+
+#DaysOrHours {
     width: 20%;
 }
 
-#Description{
+#Description {
     width: 90%;
     height: 123px;
 }
+
