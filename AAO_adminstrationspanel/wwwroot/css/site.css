@@ -179,6 +179,10 @@ body {
     color: black;
 }
 
+.dropdown ul, .dropdownKolonne ul {
+    width: auto;
+}
+
 .dropdown-menu a {
     color: black;
     margin: 0 0 20px 10px;
@@ -228,12 +232,12 @@ h1{
 
 /* TABLE */
 table {
-    width: 95%;
+    width: 75vw;
 }
 
 table tr {
     height: 50px;
-    width: 300px;
+/*    width: 300px;*/
 }
 
 table, th, td {
@@ -260,11 +264,14 @@ table, th, td {
 .buttonNavigation {
     display: flex;
     justify-content: space-between;
+    width: 75vw;
 }
 
 .buttonNavigationTrip button:first-child{
     margin-right: 25px;
 }
+
+
 
 /* CSS for "Opret Tur" */
 .wrapper {
