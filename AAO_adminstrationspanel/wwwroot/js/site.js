@@ -6,3 +6,7 @@
 function openTableColunm() {
     document.getElementById("tableToOpen").style.display="revert";
 }
+
+function closeTableColumn() {
+    document.getElementById("tableToOpen").style.display = "none";
+}
