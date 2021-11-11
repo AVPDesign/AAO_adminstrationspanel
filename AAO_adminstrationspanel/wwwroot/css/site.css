@@ -232,7 +232,7 @@ h1{
 
 /* TABLE */
 table {
-    width: 100%;
+    width: 75vw;
 }
 
 table tr {
@@ -252,9 +252,14 @@ table, th, td {
 
 #tableToOpen {
     align-items: center;
+    box-sizing: border-box;
     height: 350px;
     justify-content: center;
     position: relative;
+    width: 100%;
+}
+
+#tableToOpen table{
     width: 100%;
 }
 
@@ -265,10 +270,13 @@ table, th, td {
 .buttonNavigation {
     display: flex;
     justify-content: space-between;
-/*    width: 75vw;*/
 }
 
-.buttonNavigationTrip button:first-child{
+.filterShowHide {
+    width: 75vw;
+}
+
+.buttonNavigationTrip button:first-child {
     margin-right: 25px;
 }
 
