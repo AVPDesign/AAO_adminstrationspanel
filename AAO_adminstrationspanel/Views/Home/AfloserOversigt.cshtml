@@ -41,7 +41,7 @@
         <td></td>
     </tr>
     <tr id="tableToOpen" style="display:none">
-        <td colspan="100%" style="padding:25px">
+        <td colspan="100%" style="padding:50px">
             <div>
                 <table>
                     <tr>
@@ -75,10 +75,14 @@
                         <td></td>
                     </tr>
                 </table>
+                <p id="moreInformation">Mere information om chaufføren:</p>
                 <div class="buttonNavigation">
-                    <button class="greenButton">Godkend chauffør</button>
-                    <button class="redButton">Slet tur</button>
-                    <button class="greyButton">Rediger tur</button>
+                    <div class="buttonNavigationTrip">
+                        <button class="greenButton">Tildel tur</button>
+                        <button class="greyButton">Opret perioder</button>
+                    </div>
+                    <button class="greyButton">Godkend ændringer</button>
+                    <svg class="expandArrow" onclick="closeTableColumn()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" /></svg>
                 </div>
             </div>
         </td>
@@ -107,22 +111,6 @@
         <td></td>
         <td></td>
     </tr>
-
-    @*<tr>
-
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-
-    </tr>*@
 </table>
 
 <button class="redButton">Opret ny tur</button>
-
