@@ -221,9 +221,14 @@ button {
     right: 10px;
 }
 
+/* TEXT */
+h1{
+    margin-top: 50px;
+}
+
 /* TABLE */
 table {
-    width: 100%;
+    width: 95%;
 }
 
 table tr {
