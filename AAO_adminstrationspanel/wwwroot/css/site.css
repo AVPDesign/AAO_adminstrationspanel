@@ -217,13 +217,16 @@ button {
 .expandArrow{
     bottom: 18%;
     cursor: pointer;
-    position: absolute;
     right: 10px;
 }
 
-.expandMore{}
+.expandMore {}
 
-.expandLess{}
+.expandLess {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
 
 /* TEXT */
 h1 {
@@ -266,6 +269,7 @@ th, td {
 /* TABLE - TableInTable*/
 #tableToOpen {
     align-items: center;
+    background-color: #00904A;
     height: 350px;
     justify-content: center;
     position: relative;
@@ -284,6 +288,39 @@ th, td {
 .buttonNavigationTrip button:first-child{
     margin-right: 25px;
 }
+
+.pageNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 0 50px;
+    width: 50vw;
+}
+
+.pageNumberNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.pageNumberNavigation > svg{
+    fill: var(--aao-green);
+    border: 1px solid var(--aao-green);
+}
+
+.pageNumber {
+    margin: 0 5px;
+}
+
+.activePageNumber {
+    background: var(--aao-green);
+    color: white;
+}
+
+.pageView {
+    width: 40%;
+}
+
+
 
 /* CSS for "Opret Tur" */
 .wrapper {
