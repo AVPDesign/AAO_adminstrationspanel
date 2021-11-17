@@ -32,7 +32,7 @@
 </div>
 <hr />
 <table class="allTrips">
-    <tr>
+    <tr class="tableHeading">
         <th class="columnHeading">Startdato</th>
         <th class="columnHeading">Slutdato</th>
         <th class="columnHeading">Starttid</th>
@@ -54,15 +54,15 @@
         </td>
     </tr>
     <tr id="tableToOpen" style="display:none">
-        <td colspan="7" style="padding:50px">
+        <td colspan="8" style="padding:50px">
             <div>
                 <table>
                     <tr>
+                        <th class="columnHeading">Vælg chauffør</th>
                         <th class="columnHeading">Navn</th>
                         <th class="columnHeading">Tlf.-nr.</th>
                         <th class="columnHeading">Mail</th>
                         <th class="columnHeading">Kørekorttype</th>
-                        <th class="columnHeading">Vælg chauffør</th>
                     </tr>
                     <tr>
                         <td></td>
@@ -225,7 +225,15 @@
         <p class="pageNumber">10</p>
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" /></svg>
     </div>
-    <div class="pageView">
-        <p>Vis:</p>
-    </div>
+        <form class="pageView">
+            <label>Vis:</label>
+            <select>
+                <option value="5">5 rækker</option>
+                <option value="10" selected>10 rækker</option>
+                <option value="15">15 rækker</option>
+                <option value="20">20 rækker</option>
+                <option value="25">25 rækker</option>
+                <option value="30">30 rækker</option>
+            </select>
+        </form>
 </div>

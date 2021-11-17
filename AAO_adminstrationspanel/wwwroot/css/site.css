@@ -164,6 +164,7 @@ body {
 
 :root {
     --aao-green: #1b8416;
+    --aao-green-trans: rgb(27,132,22, 0.15);
 }
 
 /* BUTTONs */
@@ -244,21 +245,18 @@ table {
     width: 95%;
 }
 
+.tableHeading {
+    border: none;
+}
+
 table tr {
+    border: 1px solid var(--aao-green);
     height: 50px;
     width: 300px;
 }
 
-/*table, th, td {
-    border: 1px solid black;
-}*/
-
-th, td {
-    border-bottom: 1px solid var(--aao-green);
-}
-
 .allTrips > tbody > tr:nth-child(2n+4) {
-    background-color: #F2F2F2;
+    background-color: var(--aao-green-trans);
 }
 
 .columnHeading {
@@ -269,7 +267,7 @@ th, td {
 /* TABLE - TableInTable*/
 #tableToOpen {
     align-items: center;
-    background-color: #00904A;
+    background-color: var(--aao-green-trans);
     height: 350px;
     justify-content: center;
     position: relative;
@@ -292,34 +290,55 @@ th, td {
 .pageNavigation {
     display: flex;
     justify-content: space-between;
-    margin: 25px 0 0 50px;
-    width: 50vw;
+    margin: 25px 0;
+    width: 75vw;
 }
 
-.pageNumberNavigation {
+.pageNumberNavigation, .pageView {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    width: auto;
 }
 
-.pageNumberNavigation > svg{
-    fill: var(--aao-green);
-    border: 1px solid var(--aao-green);
+.pageNavigation p, .pageNavigation label{
+    margin: 0 10px 0 0;
+}
+
+.pageNumberNavigation > svg {
+fill: var(--aao-green);
+border: 1px solid var(--aao-green);
+border-radius: 10%;
+margin-right: 10px;
 }
 
 .pageNumber {
-    margin: 0 5px;
+    align-items: baseline;
+    display: flex;
+    height: 24px;
+    padding: 0 5px;
 }
 
 .activePageNumber {
     background: var(--aao-green);
+    border-radius: 10%;
     color: white;
 }
 
-.pageView {
-    width: 40%;
+.pageView > label{
+    width: auto;
 }
 
+.pageView > select {
+    border: 1px solid var(--aao-green);
+    border-radius: 5px;
+    height: 24px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.pageView > select:focus {
+    outline: none;
+}
 
 
 /* CSS for "Opret Tur" */
