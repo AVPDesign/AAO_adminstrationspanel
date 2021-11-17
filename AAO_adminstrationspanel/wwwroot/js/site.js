@@ -4,7 +4,10 @@
 // Write your JavaScript code.
 
 function openTableColunm() {
-    document.getElementById("tableToOpen").style.display="revert";
+    document.getElementById("tableToOpen").style.display = "revert";
+    document.getElementsByClassName("expandMore").style.display = "none";
+    document.getElementsByClassName("expandLess").style.display = "visible";
+
 }
 
 function closeTableColumn() {

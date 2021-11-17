@@ -31,7 +31,7 @@
     </div>
 </div>
 <hr />
-<table>
+<table class="allTrips">
     <tr>
         <th class="columnHeading">Startdato</th>
         <th class="columnHeading">Slutdato</th>
@@ -49,6 +49,10 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg style="display:none;" class="expandArrow expandLess" onclick="closeTableColumn()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" /></svg>
+        </td>
     </tr>
     <tr id="tableToOpen" style="display:none">
         <td colspan="7" style="padding:50px">
@@ -109,6 +113,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
     <tr>
         <td></td>
@@ -118,6 +123,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
     <tr>
         <td></td>
@@ -127,6 +133,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
     <tr>
         <td></td>
@@ -136,6 +143,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
     <tr>
         <td></td>
@@ -145,6 +153,7 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
     <tr>
         <td></td>
@@ -154,7 +163,41 @@
         <td></td>
         <td></td>
         <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><svg onclick="openTableColunm()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></td>
     </tr>
 </table>
 
-<button class="greenButton" onclick="location.href = 'OpretTur';">Opret ny tur</button>
+<div class="pageNavigation">
+    <div class="pageNumber"></div>
+    <div class="pageView"></div>
+</div>
