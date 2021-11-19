@@ -234,6 +234,7 @@ h1 {
 hr {
     border: 1px solid var(--aao-green);
     margin: 5px 0 10px 0;
+    width: 75vw;
 }
 
 .dropdownNavigation {
@@ -267,36 +268,97 @@ table tr {
 
 .columnHeading {
     border: 0;
-/*    text-align: center;*/
+    font-weight: bold;
+    text-align: center;
+}
+
+.headingLeft {
+    text-align: left;
+}
+
+.headingRight {
+    text-align: right;
 }
 
 /* TABLE - TableInTable*/
 #tableToOpen {
     align-items: center;
-    background-color: var(--aao-green-trans);
-    height: 350px;
+    background-color: white;
+    height: auto;
     justify-content: center;
     position: relative;
     width: 100%;
 }
 
+#tableToOpen table{
+    width: 100%;
+}
+
 .tableToOpenContainer {
     display: flex;
+    justify-content: space-between;
 }
 
 .buttonOptions {
     display: flex;
     flex-direction: column;
+    padding: 10px 15px 0 0;
 }
 
-#moreInformation{
+.buttonOptions > p {
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+
+.buttonTripNavigation{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.buttonNavigationTrip {
+    display: flex;
+    justify-content: space-between;
+    width: 47.5%;
+}
+
+.tableToOpenContainer > table > tbody {
+    background-color: white;
+}
+
+.tableToOpenContainer > table > tbody > tr:first-child{
+    background-color: var(--aao-green-trans);
+}
+
+.tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+    background-color: #F2F2F2;
+}
+
+.checkboxTd > input{
+    margin: 0;
+    position: relative;
+}
+
+.tripInformation{
+    background: white;
+}
+
+.tripInformation > tbody > tr:first-child {
+    border: none;
+}
+
+
+#moreInformation {
     margin: 25px 0 0 0;
 }
 
 .pageNavigation {
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     margin: 25px 0;
+/*    position: fixed;*/
     width: 75vw;
 }
 
@@ -311,10 +373,10 @@ table tr {
 }
 
 .pageNumberNavigation > svg {
-fill: var(--aao-green);
-border: 1px solid var(--aao-green);
-border-radius: 10%;
-margin-right: 10px;
+    fill: var(--aao-green);
+    border: 1px solid var(--aao-green);
+    border-radius: 10%;
+    margin-right: 10px;
 }
 
 .pageNumber {

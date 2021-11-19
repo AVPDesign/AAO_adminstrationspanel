@@ -27,21 +27,25 @@
         </ul>
     </div>
 </div>
+<hr />
 <table>
-    <tr>
+    <tr class="tableHeading">
         <th class="columnHeading">Navn</th>
         <th class="columnHeading">Tlf Nr</th>
         <th class="columnHeading">Email</th>
         <th class="columnHeading">Kørekort information</th>
     </tr>
     <tr>
-        <td onclick="openTableColunm()"></td>
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
     <tr id="tableToOpen" style="display:none">
-        <td colspan="4" style="padding:50px">
+        <td colspan="5" style="padding:25px">
             <div>
                 <table>
                     <tr>
@@ -76,13 +80,12 @@
                     </tr>
                 </table>
                 <p id="moreInformation">Mere information om chaufføren:</p>
-                <div class="buttonNavigation">
+                <div class="buttonTripNavigation">
                     <div class="buttonNavigationTrip">
-                        <button class="greenButton">Tildel tur</button>
+                        <button class="greenButton">Fjern chauffør</button>
                         <button class="greyButton">Opret perioder</button>
                     </div>
                     <button class="greyButton">Godkend ændringer</button>
-                    <svg class="expandArrow" onclick="closeTableColumn()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" /></svg>
                 </div>
             </div>
         </td>
@@ -92,23 +95,60 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
 </table>
+
+<div class="pageNavigation">
+    <div class="pageNumberNavigation">
+        <p>Side:</p>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" /></svg>
+        <p class="pageNumber activePageNumber">1</p>
+        <p class="pageNumber">2</p>
+        <p class="pageNumber">3</p>
+        <p class="pageNumber">5</p>
+        <p class="pageNumber">...</p>
+        <p class="pageNumber">10</p>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" /></svg>
+    </div>
+    <form class="pageView">
+        <label>Vis:</label>
+        <select>
+            <option value="5">5 rækker</option>
+            <option value="10" selected>10 rækker</option>
+            <option value="15">15 rækker</option>
+            <option value="20">20 rækker</option>
+            <option value="25">25 rækker</option>
+            <option value="30">30 rækker</option>
+        </select>
+    </form>
+</div>

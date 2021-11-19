@@ -3,7 +3,7 @@ var expandArrow = document.querySelector(".expandArrow")
 var expandMore = document.querySelector(".expandMore")
 var expandLess = document.querySelector(".expandLess")
 
-function openCloseTableColumn() {
+function tableOpenClose() {
     tableToOpen.style.display = "revert";
     expandArrow.classList.remove("expandMore");
     expandArrow.classList.add("expandLess");

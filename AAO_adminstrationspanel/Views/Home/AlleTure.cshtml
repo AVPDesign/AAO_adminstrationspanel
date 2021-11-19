@@ -50,22 +50,20 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
-    <tr id="tableToOpen" style="display:none">
-        <td colspan="8" style="padding:50px">
+    <tr id="tableToOpen" style="background:var(--aao-green-trans);display:none">
+        <td colspan="8" style="padding:25px">
             <div class="tableToOpenContainer">
-                <p>Chauffør til opgaven:</p>
                 <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
                     <button class="greenButton">Godkend chauffør</button>
-                    <button class="greenButton">Godkend chauffør</button>
-                    <button class="greenButton">Godkend chauffør</button>
-
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
                 </div>
                 <table>
-                    <tr>
-                        <th class="columnHeading" colspan="2">Chauffør til opgaven</th>
+                    <tr class="tableHeading">
                         <th class="columnHeading">Vælg chauffør</th>
                         <th class="columnHeading">Navn</th>
                         <th class="columnHeading">Tlf.-nr.</th>
@@ -73,28 +71,28 @@
                         <th class="columnHeading">Kørekorttype</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -113,7 +111,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -125,7 +123,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -137,7 +135,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -149,7 +147,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -161,7 +159,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -173,7 +171,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -185,7 +183,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -197,7 +195,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
     <tr>
@@ -209,7 +207,7 @@
         <td></td>
         <td></td>
         <td>
-            <svg class="expandArrow expandMore" onclick="openCloseTableColumn();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
 </table>
