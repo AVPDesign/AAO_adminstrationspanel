@@ -7,9 +7,9 @@ function openCloseTableColumn() {
     tableToOpen.style.display = "revert";
     expandArrow.classList.remove("expandMore");
     expandArrow.classList.add("expandLess");
-    //if tableToOpen.style.display = "revert" {
-    //    tableToOpen.style.display = "none";
-    //    expandArrow.classList.remove("expandLess");
-    //    expandArrow.classList.add("expandMore");
-    //}
+//    if (tableToOpen.style.display = "revert") {
+//        tableToOpen.style.display = "none";
+//        expandArrow.classList.remove("expandLess");
+//        expandArrow.classList.add("expandMore");
+//    }
 }

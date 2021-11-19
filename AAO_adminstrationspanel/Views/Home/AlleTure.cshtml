@@ -2,7 +2,7 @@
     ViewData["Title"] = "Alle Ture";
 }
 <h1>@ViewData["Title"]</h1>
-<div class="buttonNavigation">
+<div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
             Filter
@@ -55,9 +55,17 @@
     </tr>
     <tr id="tableToOpen" style="display:none">
         <td colspan="8" style="padding:50px">
-            <div>
+            <div class="tableToOpenContainer">
+                <p>Chauffør til opgaven:</p>
+                <div class="buttonOptions">
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greenButton">Godkend chauffør</button>
+
+                </div>
                 <table>
                     <tr>
+                        <th class="columnHeading" colspan="2">Chauffør til opgaven</th>
                         <th class="columnHeading">Vælg chauffør</th>
                         <th class="columnHeading">Navn</th>
                         <th class="columnHeading">Tlf.-nr.</th>
@@ -93,13 +101,6 @@
                         <td></td>
                     </tr>
                 </table>
-                <div class="buttonNavigation">
-                    <button class="greenButton">Godkend chauffør</button>
-                    <div class="buttonNavigationTrip">
-                        <button class="redButton">Slet tur</button>
-                        <button class="greyButton">Rediger tur</button>
-                    </div>
-                </div>
             </div>
         </td>
     </tr>

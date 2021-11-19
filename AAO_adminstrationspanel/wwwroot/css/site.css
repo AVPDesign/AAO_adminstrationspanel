@@ -185,18 +185,14 @@ body {
     margin: 0 0 20px 10px;
 }
 
-button {
-    margin: 25px 0;
-}
-
 .greenButton, .redButton, .greyButton {
     border: none;
     border-radius: 10px;
     color: white;
     height: 50px;
+    margin: 25px 0;
     padding: 0 25px;
     text-align: center;
-    width: auto;
 }
 
 .greenButton {
@@ -240,6 +236,16 @@ hr {
     margin: 5px 0 10px 0;
 }
 
+.dropdownNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+}
+
+.dropdownNavigation button:first-child{
+    margin-right: 25px;
+}
+
 /* TABLE */
 table {
     width: 95%;
@@ -256,7 +262,7 @@ table tr {
 }
 
 .allTrips > tbody > tr:nth-child(2n+4) {
-    background-color: var(--aao-green-trans);
+    background-color: #F2F2F2;
 }
 
 .columnHeading {
@@ -274,17 +280,17 @@ table tr {
     width: 100%;
 }
 
+.tableToOpenContainer {
+    display: flex;
+}
+
+.buttonOptions {
+    display: flex;
+    flex-direction: column;
+}
+
 #moreInformation{
     margin: 25px 0 0 0;
-}
-
-.buttonNavigation {
-    display: flex;
-    justify-content: space-between;
-}
-
-.buttonNavigationTrip button:first-child{
-    margin-right: 25px;
 }
 
 .pageNavigation {
