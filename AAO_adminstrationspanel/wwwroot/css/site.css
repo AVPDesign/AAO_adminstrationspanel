@@ -291,7 +291,8 @@ table tr {
     width: 100%;
 }
 
-.tableToOpen.tableToOpenExpanded{
+.tableToOpen.tableToOpenExpanded {
+    background: var(--aao-green-trans);
     display: table-row;
 }
 
@@ -349,7 +350,11 @@ table tr {
     border: none;
 }
 
-#moreInformation {
+.driverInformationTable > tbody > tr:first-child {
+    border: none;
+}
+
+.moreInformation {
     margin: 25px 0 0 0;
 }
 
