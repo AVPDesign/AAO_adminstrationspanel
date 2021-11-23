@@ -340,14 +340,9 @@ table tr {
     position: relative;
 }
 
-.tripInformation{
-    background: white;
-}
-
 .tripInformation > tbody > tr:first-child {
     border: none;
 }
-
 
 #moreInformation {
     margin: 25px 0 0 0;

@@ -2,7 +2,7 @@
     ViewData["Title"] = "Afløser Oversigt";
 }
 <h1>@ViewData["Title"]</h1>
-<div class="buttonNavigation">
+<div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
             Filter
@@ -28,7 +28,7 @@
     </div>
 </div>
 <hr />
-<table>
+<table class="replacementOverview">
     <tr class="tableHeading">
         <th class="columnHeading">Navn</th>
         <th class="columnHeading">Tlf Nr</th>
@@ -44,7 +44,7 @@
             <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
         </td>
     </tr>
-    <tr id="tableToOpen" style="display:none">
+    <tr id="tableToOpen" style="background:var(--aao-green-trans); display:none">
         <td colspan="5" style="padding:25px">
             <div>
                 <table>
