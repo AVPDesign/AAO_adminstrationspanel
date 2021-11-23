@@ -219,7 +219,7 @@ body {
 
 .expandMore {}
 
-.expandLess {
+.expandLess .expandArrow {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -281,16 +281,21 @@ table tr {
 }
 
 /* TABLE - TableInTable*/
-#tableToOpen {
+.tableToOpen {
     align-items: center;
     background-color: white;
+    display: none;
     height: auto;
     justify-content: center;
     position: relative;
     width: 100%;
 }
 
-#tableToOpen table{
+.tableToOpen.tableToOpenExpanded{
+    display: table-row;
+}
+
+.tableToOpen table{
     width: 100%;
 }
 
