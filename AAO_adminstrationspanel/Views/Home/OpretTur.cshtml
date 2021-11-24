@@ -2,7 +2,7 @@
     ViewData["Title"] = "Opret Tur";
 }
 
-<div class="wrapper">
+@*<div class="wrapper">
 
     <h1>Opret Tur</h1>
 
@@ -66,12 +66,121 @@
                         <input type="text" name="NAME" id="NAME">
                     </div>
 
-                    <div flex>
+                    <div>
                         <label for="Duration">Varighed</label>
                         <input type="number" name="Duration" id="Duration">
                         <select id="DaysOrHours">
                             <option>Timer</option>
                             <option>Dage</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="input">
+                <label for="Description">Beskrivelse</label>
+                <input type="text" name="Description" id="Description">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>*@
+
+<div class="wrapper">
+
+    <h1>Opret Tur</h1>
+
+    <div class="flex">
+
+        <div class="collumn1">
+
+            <div class="input">
+                <label for="StartDate">Startdato</label>
+                <input type="date" name="StartDate" id="StartDate">
+            </div>
+
+            <div class="input">
+                <label for="EndDate">Slutdato</label>
+                <input type="date" name="EndDate" id="EndDate">
+            </div>
+
+            <div class="input">
+                <label for="StartTime">Starttid</label>
+                <input type="time" name="StartTime" id="StartTime">
+            </div>
+
+            <div class="flex, collumn3">
+
+                <div class="input">
+                    <label for="Duration">Varighed</label>
+                    <input type="number" name="Duration" id="Duration">
+                </div>
+
+                <div class="input">
+                    <select id="DaysOrHours">
+                        <option>Timer</option>
+                        <option>Dage</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="collumn2">
+
+            <div class="flex">
+
+                <div class="collumn4">
+
+                    <div class="flex">
+
+                        <div class="input">
+                            <label for="TraficFrom">Trafik fra</label>
+                            <select id="TraficFrom">
+                                <option>DK</option>
+                                <option>SE</option>
+                                <option>DE</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="TraficTo">Trafik til</label>
+                            <select id="TraficTo">
+                                <option>DK</option>
+                                <option>SE</option>
+                                <option>DE</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="input">
+                        <label for="StartPoint">Startsted</label>
+                        <select id="StartPoint">
+                            <option>Odense</option>
+                            <option>Aarhus</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="collumn4">
+
+                    <div class="input">
+                        <label for="Contact">Kontakt</label>
+                        <input type="text" name="Contact" id="Contact">
+                    </div>
+
+                    <div class="input">
+                        <label for="Department">Afdeling</label>
+                        <select id="Department">
+                            <option>Odense</option>
+                            <option>Aarhus</option>
                         </select>
                     </div>
 

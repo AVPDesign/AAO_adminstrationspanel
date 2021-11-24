@@ -300,10 +300,13 @@ table, th, td {
     width: 100%;
 }
 
+.collumn4 {
+    width: 50%;
+}
+
 .flex {
     display: flex;
 }
-
 
 .input{
 
@@ -311,32 +314,22 @@ table, th, td {
     float: left;
     width: 100%;
 }
-
-
+/*
 label, input, select {
-
     display: block;
     width: 80%;
 }
 
-
 input, select {
-
     height: 35px;
     padding: 5px;
     margin-bottom: 20px;
-}
-
-
-.width50 {
-    width: 50%;
 }
 
 #Duration {
     width: 60%;
     float: left;
 }
-
 
 #DaysOrHours {
     width: 20%;
@@ -345,5 +338,4 @@ input, select {
 #Description {
     width: 90%;
     height: 123px;
-}
-
+}*/
