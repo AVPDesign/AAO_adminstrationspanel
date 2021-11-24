@@ -25,33 +25,55 @@
                 <input type="time" name="StartTime" id="StartTime">
             </div>
 
-            <div class="input">
-                <label for="Department">Afdeling</label>
-                <select id="Department">
-                    <option>Odense</option>
-                    <option>Aarhus</option>
-                </select>
+            <div class="flex, collumn3">
+
+                <div class="input">
+                    <label for="Duration">Varighed</label>
+                    <input type="number" name="Duration" id="Duration">
+                </div>
+
+                <div class="input">
+                    <select id="DaysOrHours">
+                        <option>Timer</option>
+                        <option>Dage</option>
+                    </select>
+                </div>
+
             </div>
 
         </div>
 
         <div class="collumn2">
 
-            <div class="collumn3 flex">
+            <div class="flex">
 
-                <div class="width50">
+                <div class="collumn4">
 
-                    <div class="input">
-                        <label for="PickUp">Pick-Up</label>
-                        <select id="PickUp">
-                            <option>Odense</option>
-                            <option>Aarhus</option>
-                        </select>
+                    <div class="flex">
+
+                        <div class="input">
+                            <label for="TrafficFrom">Trafik fra</label>
+                            <select id="TrafficFrom">
+                                <option>DK</option>
+                                <option>SE</option>
+                                <option>DE</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="TrafficTo">Trafik til</label>
+                            <select id="TrafficTo">
+                                <option>DK</option>
+                                <option>SE</option>
+                                <option>DE</option>
+                            </select>
+                        </div>
+
                     </div>
 
                     <div class="input">
-                        <label for="DropOff">Drop-Off</label>
-                        <select id="DropOff">
+                        <label for="StartPoint">Startsted</label>
+                        <select id="StartPoint">
                             <option>Odense</option>
                             <option>Aarhus</option>
                         </select>
@@ -59,19 +81,18 @@
 
                 </div>
 
-                <div class="width50">
+                <div class="collumn4">
 
                     <div class="input">
-                        <label for="ID">TEXT</label>
-                        <input type="text" name="NAME" id="NAME">
+                        <label for="Contact">Kontakt</label>
+                        <input type="text" name="Contact" id="Contact">
                     </div>
 
-                    <div flex>
-                        <label for="Duration">Varighed</label>
-                        <input type="number" name="Duration" id="Duration">
-                        <select id="DaysOrHours">
-                            <option>Timer</option>
-                            <option>Dage</option>
+                    <div class="input">
+                        <label for="Department">Afdeling</label>
+                        <select id="Department">
+                            <option>Odense</option>
+                            <option>Aarhus</option>
                         </select>
                     </div>
 

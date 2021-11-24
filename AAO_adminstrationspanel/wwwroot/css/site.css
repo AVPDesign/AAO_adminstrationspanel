@@ -300,50 +300,48 @@ table, th, td {
     width: 100%;
 }
 
+.collumn4 {
+    width: 50%;
+}
+
 .flex {
     display: flex;
 }
 
-
 .input{
-
     display: block;
     float: left;
     width: 100%;
 }
 
-
 label, input, select {
-
     display: block;
     width: 80%;
 }
 
-
 input, select {
-
     height: 35px;
     padding: 5px;
     margin-bottom: 20px;
 }
 
-
-.width50 {
+#Duration {
     width: 50%;
 }
 
-#Duration {
-    width: 60%;
-    float: left;
+#DaysOrHours {
+    width: 30%;
 }
 
+#TrafficTo {
+    width: 60%;
+}
 
-#DaysOrHours {
-    width: 20%;
+#TrafficFrom {
+    width: 60%;
 }
 
 #Description {
     width: 90%;
     height: 123px;
 }
-
