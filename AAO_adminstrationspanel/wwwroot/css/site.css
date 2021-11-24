@@ -162,13 +162,13 @@ body {
 /* tables styles
 -------------------------------------------------- */
 
-:root {
+/*:root {
     --aao-green: #1b8416;
     --aao-green-trans: rgb(27,132,22, 0.15);
-}
+}*/
 
 /* BUTTONs */
-.btn-primary, .btn-primary:hover, .btn-primary:focus {
+/*.btn-primary, .btn-primary:hover, .btn-primary:focus {
     background: none;
     border: none;
     color: black;
@@ -224,15 +224,15 @@ body {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
-}
+}*/
 
 /* TEXT */
-h1 {
+/*h1 {
     margin-top: 50px;
-}
+}*/
 
 /* HR */
-hr {
+/*hr {
     border: 1px solid var(--aao-green);
     margin: 5px 0 10px 0;
     width: 75vw;
@@ -246,10 +246,10 @@ hr {
 
     .dropdownNavigation button:first-child {
         margin-right: 25px;
-    }
+    }*/
 
 /* TABLE */
-table {
+/*table {
     width: 95%;
 }
 
@@ -279,10 +279,10 @@ table tr {
 
 .headingRight {
     text-align: right;
-}
+}*/
 
 /* TABLE - TableInTable*/
-.tableToOpen {
+/*.tableToOpen {
     align-items: center;
     background-color: white;
     display: none;
@@ -363,9 +363,9 @@ table tr {
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;
+    margin: 25px 0;*/
     /*    position: fixed;*/
-    width: 75vw;
+    /*width: 75vw;
 }
 
 .pageNumberNavigation, .pageView {
@@ -410,9 +410,9 @@ table tr {
     padding: 0 5px;
 }
 
-    .pageView > select:focus {
-        outline: none;
-    }
+.pageView > select:focus {
+    outline: none;
+}*/
 
 
 /* CSS for "Opret Tur" */
