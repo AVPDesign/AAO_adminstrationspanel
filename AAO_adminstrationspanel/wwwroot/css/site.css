@@ -71,9 +71,9 @@ ul, li {
     align-items: center;
 }
 
-  nav-item a {
-        text-align: left;
-    }
+nav-item a {
+    text-align: left;
+}
 
 .nav-item-minimere {
     position: absolute;
@@ -174,11 +174,11 @@ body {
     color: black;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-    background: none;
-    border: none;
-    color: black;
-}
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+        background: none;
+        border: none;
+        color: black;
+    }
 
 .dropdown-menu a {
     color: black;
@@ -211,13 +211,14 @@ body {
     border: none;
 }
 
-.expandArrow{
+.expandArrow {
     bottom: 18%;
     cursor: pointer;
     right: 10px;
 }
 
-.expandMore {}
+.expandMore {
+}
 
 .expandLess .expandArrow {
     transform: rotate(180deg);
@@ -243,9 +244,9 @@ hr {
     width: 75vw;
 }
 
-.dropdownNavigation button:first-child{
-    margin-right: 25px;
-}
+    .dropdownNavigation button:first-child {
+        margin-right: 25px;
+    }
 
 /* TABLE */
 table {
@@ -291,14 +292,14 @@ table tr {
     width: 100%;
 }
 
-.tableToOpen.tableToOpenExpanded {
-    background: var(--aao-green-trans);
-    display: table-row;
-}
+    .tableToOpen.tableToOpenExpanded {
+        background: var(--aao-green-trans);
+        display: table-row;
+    }
 
-.tableToOpen table{
-    width: 100%;
-}
+    .tableToOpen table {
+        width: 100%;
+    }
 
 .tableToOpenContainer {
     display: flex;
@@ -311,13 +312,13 @@ table tr {
     padding: 10px 15px 0 0;
 }
 
-.buttonOptions > p {
-    align-items: center;
-    display: flex;
-    height: 50px;
-}
+    .buttonOptions > p {
+        align-items: center;
+        display: flex;
+        height: 50px;
+    }
 
-.buttonTripNavigation{
+.buttonTripNavigation {
     display: flex;
     justify-content: space-between;
     width: 95%;
@@ -333,15 +334,15 @@ table tr {
     background-color: white;
 }
 
-.tableToOpenContainer > table > tbody > tr:first-child{
-    background-color: var(--aao-green-trans);
-}
+    .tableToOpenContainer > table > tbody > tr:first-child {
+        background-color: var(--aao-green-trans);
+    }
 
-.tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
-    background-color: #F2F2F2;
-}
+    .tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+        background-color: #F2F2F2;
+    }
 
-.checkboxTd > input{
+.checkboxTd > input {
     margin: 0;
     position: relative;
 }
@@ -363,7 +364,7 @@ table tr {
     display: flex;
     justify-content: space-between;
     margin: 25px 0;
-/*    position: fixed;*/
+    /*    position: fixed;*/
     width: 75vw;
 }
 
@@ -373,7 +374,7 @@ table tr {
     width: auto;
 }
 
-.pageNavigation p, .pageNavigation label{
+.pageNavigation p, .pageNavigation label {
     margin: 0 10px 0 0;
 }
 
@@ -397,7 +398,7 @@ table tr {
     color: white;
 }
 
-.pageView > label{
+.pageView > label {
     width: auto;
 }
 
@@ -409,9 +410,9 @@ table tr {
     padding: 0 5px;
 }
 
-.pageView > select:focus {
-    outline: none;
-}
+    .pageView > select:focus {
+        outline: none;
+    }
 
 
 /* CSS for "Opret Tur" */
@@ -432,50 +433,48 @@ table tr {
     width: 100%;
 }
 
+.collumn4 {
+    width: 50%;
+}
+
 .flex {
     display: flex;
 }
 
-
-.input{
-
+.input {
     display: block;
     float: left;
     width: 100%;
 }
 
-
 label, input, select {
-
     display: block;
     width: 80%;
 }
 
-
 input, select {
-
     height: 35px;
     padding: 5px;
     margin-bottom: 20px;
 }
 
-
-.width50 {
+#Duration {
     width: 50%;
 }
 
-#Duration {
-    width: 60%;
-    float: left;
+#DaysOrHours {
+    width: 30%;
 }
 
+#TrafficTo {
+    width: 60%;
+}
 
-#DaysOrHours {
-    width: 20%;
+#TrafficFrom {
+    width: 60%;
 }
 
 #Description {
     width: 90%;
     height: 123px;
 }
-
