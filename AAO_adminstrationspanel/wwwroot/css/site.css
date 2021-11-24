@@ -309,12 +309,11 @@ table, th, td {
 }
 
 .input{
-
     display: block;
     float: left;
     width: 100%;
 }
-/*
+
 label, input, select {
     display: block;
     width: 80%;
@@ -327,15 +326,22 @@ input, select {
 }
 
 #Duration {
-    width: 60%;
-    float: left;
+    width: 50%;
 }
 
 #DaysOrHours {
-    width: 20%;
+    width: 30%;
+}
+
+#TrafficTo {
+    width: 60%;
+}
+
+#TrafficFrom {
+    width: 60%;
 }
 
 #Description {
     width: 90%;
     height: 123px;
-}*/
+}
