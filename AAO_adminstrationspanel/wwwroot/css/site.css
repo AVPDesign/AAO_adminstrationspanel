@@ -71,9 +71,9 @@ ul, li {
     align-items: center;
 }
 
-  nav-item a {
-        text-align: left;
-    }
+nav-item a {
+    text-align: left;
+}
 
 .nav-item-minimere {
     position: absolute;
@@ -164,6 +164,7 @@ body {
 
 :root {
     --aao-green: #1b8416;
+    --aao-green-trans: rgb(27,132,22, 0.15);
 }
 
 /* BUTTONs */
@@ -173,23 +174,15 @@ body {
     color: black;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-    background: none;
-    border: none;
-    color: black;
-}
-
-.dropdown ul, .dropdownKolonne ul {
-    width: auto;
-}
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+        background: none;
+        border: none;
+        color: black;
+    }
 
 .dropdown-menu a {
     color: black;
     margin: 0 0 20px 10px;
-}
-
-button {
-    margin: 25px 0;
 }
 
 .greenButton, .redButton, .greyButton {
@@ -197,9 +190,9 @@ button {
     border-radius: 10px;
     color: white;
     height: 50px;
+    margin: 25px 0;
     padding: 0 25px;
     text-align: center;
-    width: auto;
 }
 
 .greenButton {
@@ -218,68 +211,208 @@ button {
     border: none;
 }
 
-.expandArrow{
+.expandArrow {
     bottom: 18%;
     cursor: pointer;
-    position: absolute;
     right: 10px;
 }
 
+.expandMore {
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
 /* TEXT */
-h1{
+h1 {
     margin-top: 50px;
 }
 
-/* TABLE */
-table {
+/* HR */
+hr {
+    border: 1px solid var(--aao-green);
+    margin: 5px 0 10px 0;
     width: 75vw;
 }
 
-table tr {
-    height: 50px;
-/*    width: 300px;*/
+.dropdownNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
 }
 
-table, th, td {
-    border: 1px solid black;
+    .dropdownNavigation button:first-child {
+        margin-right: 25px;
+    }
+
+/* TABLE */
+table {
+    width: 95%;
+}
+
+.tableHeading {
+    border: none;
+}
+
+table tr {
+    border: 1px solid var(--aao-green);
+    height: 50px;
+    width: 300px;
+}
+
+.allTrips > tbody > tr:nth-child(2n+4) {
+    background-color: #F2F2F2;
 }
 
 .columnHeading {
+    border: 0;
+    font-weight: bold;
     text-align: center;
 }
 
-/* TABLE - TableInTable*/
+.headingLeft {
+    text-align: left;
+}
 
-#tableToOpen {
+.headingRight {
+    text-align: right;
+}
+
+/* TABLE - TableInTable*/
+.tableToOpen {
     align-items: center;
-    box-sizing: border-box;
-    height: 350px;
+    background-color: white;
+    display: none;
+    height: auto;
     justify-content: center;
     position: relative;
     width: 100%;
 }
 
-#tableToOpen table{
-    width: 100%;
-}
+    .tableToOpen.tableToOpenExpanded {
+        background: var(--aao-green-trans);
+        display: table-row;
+    }
 
-#moreInformation{
-    margin: 25px 0 0 0;
-}
+    .tableToOpen table {
+        width: 100%;
+    }
 
-.buttonNavigation {
+.tableToOpenContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.filterShowHide {
+.buttonOptions {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 0 0;
+}
+
+    .buttonOptions > p {
+        align-items: center;
+        display: flex;
+        height: 50px;
+    }
+
+.buttonTripNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.buttonNavigationTrip {
+    display: flex;
+    justify-content: space-between;
+    width: 47.5%;
+}
+
+.tableToOpenContainer > table > tbody {
+    background-color: white;
+}
+
+    .tableToOpenContainer > table > tbody > tr:first-child {
+        background-color: var(--aao-green-trans);
+    }
+
+    .tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+        background-color: #F2F2F2;
+    }
+
+.checkboxTd > input {
+    margin: 0;
+    position: relative;
+}
+
+.tripInformation > tbody > tr:first-child {
+    border: none;
+}
+
+.driverInformationTable > tbody > tr:first-child {
+    border: none;
+}
+
+.moreInformation {
+    margin: 25px 0 0 0;
+}
+
+.pageNavigation {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    /*    position: fixed;*/
     width: 75vw;
 }
 
-.buttonNavigationTrip button:first-child {
-    margin-right: 25px;
+.pageNumberNavigation, .pageView {
+    align-items: center;
+    display: flex;
+    width: auto;
 }
 
+.pageNavigation p, .pageNavigation label {
+    margin: 0 10px 0 0;
+}
+
+.pageNumberNavigation > svg {
+    fill: var(--aao-green);
+    border: 1px solid var(--aao-green);
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+.pageNumber {
+    align-items: baseline;
+    display: flex;
+    height: 24px;
+    padding: 0 5px;
+}
+
+.activePageNumber {
+    background: var(--aao-green);
+    border-radius: 10%;
+    color: white;
+}
+
+.pageView > label {
+    width: auto;
+}
+
+.pageView > select {
+    border: 1px solid var(--aao-green);
+    border-radius: 5px;
+    height: 24px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+    .pageView > select:focus {
+        outline: none;
+    }
 
 
 /* CSS for "Opret Tur" */
@@ -308,7 +441,7 @@ table, th, td {
     display: flex;
 }
 
-.input{
+.input {
     display: block;
     float: left;
     width: 100%;
