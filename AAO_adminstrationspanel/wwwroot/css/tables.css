@@ -19,6 +19,11 @@
     color: black;
 }
 
+.dropdown-menu {
+    padding-right: 10px;
+    width: auto;
+}
+
 .dropdown-menu a {
     color: black;
     margin: 0 0 20px 10px;
@@ -83,9 +88,9 @@ hr {
     width: 75vw;
 }
 
-    .dropdownNavigation button:first-child {
-        margin-right: 25px;
-    }
+.dropdownNavigation button:first-child {
+    margin-right: 25px;
+}
 
 /* TABLE */
 table {
@@ -102,7 +107,19 @@ table tr {
     width: 300px;
 }
 
-.allTrips > tbody > tr:nth-child(2n+4) {
+/*.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}*/
+
+.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.assignedTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.replacementOverview > tbody > tr:nth-child(4n+2) {
     background-color: #F2F2F2;
 }
 
@@ -131,14 +148,14 @@ table tr {
     width: 100%;
 }
 
-    .tableToOpen.tableToOpenExpanded {
-        background: var(--aao-green-trans);
-        display: table-row;
-    }
+.tableToOpen.tableToOpenExpanded {
+    background: var(--aao-green-trans);
+    display: table-row;
+}
 
-    .tableToOpen table {
-        width: 100%;
-    }
+.tableToOpen table {
+    width: 100%;
+}
 
 .tableToOpenContainer {
     display: flex;
@@ -151,11 +168,11 @@ table tr {
     padding: 10px 15px 0 0;
 }
 
-    .buttonOptions > p {
-        align-items: center;
-        display: flex;
-        height: 50px;
-    }
+.buttonOptions > p {
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
 
 .buttonTripNavigation {
     display: flex;
@@ -173,13 +190,13 @@ table tr {
     background-color: white;
 }
 
-    .tableToOpenContainer > table > tbody > tr:first-child {
-        background-color: var(--aao-green-trans);
-    }
+.tableToOpenContainer > table > tbody > tr:first-child {
+    background-color: var(--aao-green-trans);
+}
 
-    .tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
-        background-color: #F2F2F2;
-    }
+.tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+    background-color: #F2F2F2;
+}
 
 .checkboxTd > input {
     margin: 0;
