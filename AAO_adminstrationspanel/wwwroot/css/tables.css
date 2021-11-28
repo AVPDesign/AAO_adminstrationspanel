@@ -131,16 +131,6 @@ table tr {
 .expandMore {
 }
 
-.allTrips .expandRow.expandLess {
-    background: var(--aao-green-trans);
-}
-
-.expandLess .expandArrow {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-}
-
 /* TABLE - TableInTable*/
 .tableToOpen {
     align-items: center;
@@ -165,6 +155,25 @@ table tr {
     display: flex;
     justify-content: space-between;
 }
+
+.allTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.assignedTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.replacementOverview .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
 
 .buttonOptions {
     display: flex;
