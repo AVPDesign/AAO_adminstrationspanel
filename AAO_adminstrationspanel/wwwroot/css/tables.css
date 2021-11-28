@@ -55,21 +55,6 @@
     border: none;
 }
 
-.expandArrow {
-    bottom: 18%;
-    cursor: pointer;
-    right: 10px;
-}
-
-.expandMore {
-}
-
-.expandLess .expandArrow {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-}
-
 /* TEXT */
 h1 {
     margin-top: 50px;
@@ -135,6 +120,25 @@ table tr {
 
 .headingRight {
     text-align: right;
+}
+
+.expandArrow {
+    bottom: 18%;
+    cursor: pointer;
+    right: 10px;
+}
+
+.expandMore {
+}
+
+.allTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
 }
 
 /* TABLE - TableInTable*/
