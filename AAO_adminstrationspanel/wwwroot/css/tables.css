@@ -1,16 +1,12 @@
-﻿/* *** */
+﻿/* tables styles
+-------------------------------------------------- */
 
 :root {
     --aao-green: #1b8416;
+    --aao-green-trans: rgb(27,132,22, 0.15);
 }
 
 /* BUTTONs */
-
-.buttonNavigation{
-    display: flex;
-    justify-content: space-between;
-}
-
 .btn-primary, .btn-primary:hover, .btn-primary:focus {
     background: none;
     border: none;
@@ -23,23 +19,24 @@
     color: black;
 }
 
-.dropdown-menu a{
+.dropdown-menu {
+    padding-right: 10px;
+    width: auto;
+}
+
+.dropdown-menu a {
     color: black;
     margin: 0 0 20px 10px;
 }
 
-button {
-    margin: 25px 0;
-}
-
-.greenButton, .redButton, .greyButton{
+.greenButton, .redButton, .greyButton {
     border: none;
     border-radius: 10px;
     color: white;
     height: 50px;
+    margin: 25px 0;
     padding: 0 25px;
     text-align: center;
-    width: auto;
 }
 
 .greenButton {
@@ -58,29 +55,230 @@ button {
     border: none;
 }
 
-/* TABLE */
-table {
-    width: 100%;
+/* TEXT */
+h1 {
+    margin-top: 50px;
 }
 
-table tr{
+/* HR */
+hr {
+    border: 1px solid var(--aao-green);
+    margin: 5px 0 10px 0;
+    width: 75vw;
+}
+
+.dropdownNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+}
+
+.dropdownNavigation button:first-child {
+    margin-right: 25px;
+}
+
+/* TABLE */
+table {
+    width: 95%;
+}
+
+.tableHeading {
+    border: none;
+}
+
+table tr {
+    border: 1px solid var(--aao-green);
     height: 50px;
     width: 300px;
 }
 
-table, th, td {
-    border: 1px solid black;
+/*.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}*/
+
+.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
 }
 
-.columnHeading{
+.assignedTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.replacementOverview > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.columnHeading {
+    border: 0;
+    font-weight: bold;
     text-align: center;
 }
 
+.headingLeft {
+    text-align: left;
+}
+
+.headingRight {
+    text-align: right;
+}
+
+.expandArrow {
+    bottom: 18%;
+    cursor: pointer;
+    right: 10px;
+}
+
+.expandMore {
+}
+
 /* TABLE - TableInTable*/
-#tableToOpen{
+.tableToOpen {
     align-items: center;
-    height: 350px;
+    background-color: white;
+    display: none;
+    height: auto;
     justify-content: center;
     position: relative;
     width: 100%;
+}
+
+.tableToOpen.tableToOpenExpanded {
+    background: var(--aao-green-trans);
+    display: table-row;
+}
+
+.tableToOpen table {
+    width: 100%;
+}
+
+.tableToOpenContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.allTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.assignedTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.replacementOverview .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+
+.buttonOptions {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 0 0;
+}
+
+.buttonOptions > p {
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
+
+.buttonTripNavigation {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.buttonNavigationTrip {
+    display: flex;
+    justify-content: space-between;
+    width: 47.5%;
+}
+
+.tableToOpenContainer > table > tbody {
+    background-color: white;
+}
+
+.tableToOpenContainer > table > tbody > tr:first-child {
+    background-color: var(--aao-green-trans);
+}
+
+.tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+    background-color: #F2F2F2;
+}
+
+.checkboxTd > input {
+    margin: 0;
+    position: relative;
+}
+
+.tripInformation > tbody > tr:first-child {
+    border: none;
+}
+
+.driverInformationTable > tbody > tr:first-child {
+    border: none;
+}
+
+.moreInformation {
+    margin: 25px 0 0 0;
+}
+
+.pageNavigation {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    /*    position: fixed;*/
+    width: 75vw;
+}
+
+.pageNumberNavigation, .pageView {
+    align-items: center;
+    display: flex;
+    width: auto;
+}
+
+.pageNavigation p, .pageNavigation label {
+    margin: 0 10px 0 0;
+}
+
+.pageNumberNavigation > svg {
+    fill: var(--aao-green);
+    border: 1px solid var(--aao-green);
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+.pageNumber {
+    align-items: baseline;
+    display: flex;
+    height: 24px;
+    padding: 0 5px;
+}
+
+.activePageNumber {
+    background: var(--aao-green);
+    border-radius: 10%;
+    color: white;
+}
+
+.pageView > label {
+    width: auto;
+}
+
+.pageView > select {
+    border: 1px solid var(--aao-green);
+    border-radius: 5px;
+    height: 24px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.pageView > select:focus {
+    outline: none;
 }
