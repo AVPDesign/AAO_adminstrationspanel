@@ -224,12 +224,12 @@ body {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
-}*/
+}
 
 /* TEXT */
-/*h1 {
+h1 {
     margin-top: 50px;
-}*/
+}
 
 /* HR */
 hr {
@@ -241,10 +241,16 @@ hr {
 .dropdownNavigation {
     display: flex;
     justify-content: space-between;
-    width: 75vw;
+/*    width: 75vw;*/
 }
+
 .dropdownNavigation button:first-child {
     margin-right: 25px;
+}
+
+.dropdown-menu {
+    padding-right: 10px;
+    width: auto;
 }
 
 /* TABLE */
@@ -262,7 +268,15 @@ table tr {
     width: 300px;
 }
 
-.allTrips > tbody > tr:nth-child(2n+4) {
+.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.assignedTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.replacementOverview > tbody > tr:nth-child(4n+2) {
     background-color: #F2F2F2;
 }
 
@@ -303,6 +317,24 @@ table tr {
 .tableToOpenContainer {
     display: flex;
     justify-content: space-between;
+}
+
+.allTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.assignedTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.replacementOverview .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
 }
 
 .buttonOptions {
@@ -362,7 +394,7 @@ table tr {
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;*/
+    margin: 25px 0;
     /*    position: fixed;*/
     width: 75vw;
 }

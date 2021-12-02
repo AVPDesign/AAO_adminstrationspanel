@@ -77,6 +77,11 @@ hr {
     margin-right: 25px;
 }
 
+.dropdown-menu {
+    padding-right: 10px;
+    width: auto;
+}
+
 /* TABLE */
 table {
     width: 95%;
