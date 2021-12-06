@@ -416,6 +416,10 @@ table tr {
 
 
 /* CSS for "Opret Tur" */
+h1{
+    margin-bottom: 50px;
+}
+
 .wrapper {
     width: 100%;
     display: block;
