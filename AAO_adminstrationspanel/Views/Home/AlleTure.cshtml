@@ -2,7 +2,7 @@
     ViewData["Title"] = "Alle Ture";
 }
 <h1>@ViewData["Title"]</h1>
-<div class="buttonNavigation filterShowHide">
+<div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
             Filter
@@ -30,8 +30,9 @@
         </ul>
     </div>
 </div>
-<table>
-    <tr>
+<hr />
+<table class="allTrips">
+    <tr class="tableHeading">
         <th class="columnHeading">Startdato</th>
         <th class="columnHeading">Slutdato</th>
         <th class="columnHeading">Starttid</th>
@@ -40,67 +41,68 @@
         <th class="columnHeading">Afdeling</th>
         <th class="columnHeading">Status</th>
     </tr>
-    <tr>
-        <td onclick="openTableColunm()"></td>
+    <tr class="expandRow">
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
-    <tr id="tableToOpen" style="display: none;">
-        <td colspan="7" style="padding:50px;">
-            <div>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
                 <table>
-                    <tr>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
                         <th class="columnHeading">Navn</th>
                         <th class="columnHeading">Tlf.-nr.</th>
                         <th class="columnHeading">Mail</th>
                         <th class="columnHeading">Kørekorttype</th>
-                        <th class="columnHeading">Vælg chauffør</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                 </table>
-                <div class="buttonNavigation">
-                    <button class="greenButton">Godkend chauffør</button>
-                    <div class="buttonNavigationTrip">
-                        <button class="redButton">Slet tur</button>
-                        <button class="greyButton">Rediger tur</button>
-                    </div>
-                    <svg class="expandArrow" onclick="closeTableColumn()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" /></svg>
-                </div>
             </div>
         </td>
     </tr>
-    <tr>
+    <tr class="expandRow">
         <td></td>
         <td></td>
         <td></td>
@@ -108,17 +110,60 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
     </tr>
-    <tr>
+    <tr class="expandRow">
         <td></td>
         <td></td>
         <td></td>
@@ -126,17 +171,60 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
     </tr>
-    <tr>
+    <tr class="expandRow">
         <td></td>
         <td></td>
         <td></td>
@@ -144,8 +232,60 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
     </tr>
-    <tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
         <td></td>
         <td></td>
         <td></td>
@@ -153,7 +293,387 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class="expandRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <svg class="expandArrow expandMore" onclick="tableOpenClose();" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87" /><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg>
+        </td>
+    </tr>
+    <tr class="tableToOpen">
+        <td colspan="8" style="padding:25px">
+            <div class="tableToOpenContainer">
+                <div class="buttonOptions">
+                    <p class="columnHeading">Chauffør til opgaven:</p>
+                    <button class="greenButton">Godkend chauffør</button>
+                    <button class="greyButton">Rediger tur</button>
+                    <button class="redButton">Slet tur</button>
+                </div>
+                <table>
+                    <tr class="tableHeading">
+                        <th class="columnHeading">Vælg chauffør</th>
+                        <th class="columnHeading">Navn</th>
+                        <th class="columnHeading">Tlf.-nr.</th>
+                        <th class="columnHeading">Mail</th>
+                        <th class="columnHeading">Kørekorttype</th>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="checkboxTd"><input type="checkbox"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </td>
     </tr>
 </table>
 
-<button class="greenButton" onclick="location.href = 'OpretTur';">Opret ny tur</button>
+<div class="pageNavigation">
+    <div class="pageNumberNavigation">
+        <p>Side:</p>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" /></svg>
+        <p class="pageNumber activePageNumber">1</p>
+        <p class="pageNumber">2</p>
+        <p class="pageNumber">3</p>
+        <p class="pageNumber">5</p>
+        <p class="pageNumber">...</p>
+        <p class="pageNumber">10</p>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" /></svg>
+    </div>
+        <form class="pageView">
+            <label>Vis:</label>
+            <select>
+                <option value="5">5 rækker</option>
+                <option value="10" selected>10 rækker</option>
+                <option value="15">15 rækker</option>
+                <option value="20">20 rækker</option>
+                <option value="25">25 rækker</option>
+                <option value="30">30 rækker</option>
+            </select>
+        </form>
+</div>

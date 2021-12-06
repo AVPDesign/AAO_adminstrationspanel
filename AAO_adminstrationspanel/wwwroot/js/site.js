@@ -1,12 +1,23 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿//document.querySelectorAll('.expandRow').forEach(expandRow => {
+//    expandRow.addEventListener('click', function() {
+//        if (!expandRow.classList.contains('expandLess')) {
+//            expandRow.classList.add('expandLess');
+//            expandRow.nextElementSibling.classList.add('tableToOpenExpanded');
+//        } else {
+//            expandRow.classList.remove('expandLess');
+//            expandRow.nextElementSibling.classList.remove('tableToOpenExpanded');
+//        }
+//    });
+//});
 
-// Write your JavaScript code.
-
-function openTableColunm() {
-    document.getElementById("tableToOpen").style.display="revert";
-}
-
-function closeTableColumn() {
-    document.getElementById("tableToOpen").style.display = "none";
-}
+document.querySelectorAll('.expandRow').forEach(expandRow => {
+    expandRow.addEventListener('click', function () {
+        if (!expandRow.classList.contains('expandLess')) {
+            expandRow.classList.add('expandLess');
+            expandRow.nextElementSibling.classList.add('tableToOpenExpanded');
+        } else {
+            expandRow.classList.remove('expandLess');
+            expandRow.nextElementSibling.classList.remove('tableToOpenExpanded');
+        }
+    });
+});

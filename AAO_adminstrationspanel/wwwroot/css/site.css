@@ -174,11 +174,11 @@ body {
     color: black;
 }
 
-    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-        background: none;
-        border: none;
-        color: black;
-    }
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background: none;
+    border: none;
+    color: black;
+}
 
 .dropdown-menu a {
     color: black;
@@ -241,12 +241,17 @@ hr {
 .dropdownNavigation {
     display: flex;
     justify-content: space-between;
-    width: 75vw;
+/*    width: 75vw;*/
 }
 
-    .dropdownNavigation button:first-child {
-        margin-right: 25px;
-    }
+.dropdownNavigation button:first-child {
+    margin-right: 25px;
+}
+
+.dropdown-menu {
+    padding-right: 10px;
+    width: auto;
+}
 
 /* TABLE */
 table {
@@ -263,7 +268,15 @@ table tr {
     width: 300px;
 }
 
-.allTrips > tbody > tr:nth-child(2n+4) {
+.allTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.assignedTrips > tbody > tr:nth-child(4n+2) {
+    background-color: #F2F2F2;
+}
+
+.replacementOverview > tbody > tr:nth-child(4n+2) {
     background-color: #F2F2F2;
 }
 
@@ -292,18 +305,36 @@ table tr {
     width: 100%;
 }
 
-    .tableToOpen.tableToOpenExpanded {
-        background: var(--aao-green-trans);
-        display: table-row;
-    }
+.tableToOpen.tableToOpenExpanded {
+    background: var(--aao-green-trans);
+    display: table-row;
+}
 
-    .tableToOpen table {
-        width: 100%;
-    }
+.tableToOpen table {
+    width: 100%;
+}
 
 .tableToOpenContainer {
     display: flex;
     justify-content: space-between;
+}
+
+.allTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.assignedTrips .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.replacementOverview .expandRow.expandLess {
+    background: var(--aao-green-trans);
+}
+
+.expandLess .expandArrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
 }
 
 .buttonOptions {
@@ -312,11 +343,11 @@ table tr {
     padding: 10px 15px 0 0;
 }
 
-    .buttonOptions > p {
-        align-items: center;
-        display: flex;
-        height: 50px;
-    }
+.buttonOptions > p {
+    align-items: center;
+    display: flex;
+    height: 50px;
+}
 
 .buttonTripNavigation {
     display: flex;
@@ -334,13 +365,13 @@ table tr {
     background-color: white;
 }
 
-    .tableToOpenContainer > table > tbody > tr:first-child {
-        background-color: var(--aao-green-trans);
-    }
+.tableToOpenContainer > table > tbody > tr:first-child {
+    background-color: var(--aao-green-trans);
+}
 
-    .tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
-        background-color: #F2F2F2;
-    }
+.tableToOpenContainer > table > tbody > tr:nth-child(2n+2) {
+    background-color: #F2F2F2;
+}
 
 .checkboxTd > input {
     margin: 0;
@@ -410,9 +441,9 @@ table tr {
     padding: 0 5px;
 }
 
-    .pageView > select:focus {
-        outline: none;
-    }
+.pageView > select:focus {
+    outline: none;
+}
 
 
 /* CSS for "Opret Tur" */
