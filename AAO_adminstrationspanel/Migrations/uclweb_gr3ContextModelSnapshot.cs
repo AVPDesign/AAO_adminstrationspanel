@@ -4,20 +4,18 @@ using AAO_adminstrationspanel.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AAO_adminstrationspanel.Migrations
 {
-    [DbContext(typeof(AdminPanelAAO_dbContext))]
-    [Migration("20211206142052_DBinit")]
-    partial class DBinit
+    [DbContext(typeof(uclweb_gr3Context))]
+    partial class uclweb_gr3ContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:Collation", "Danish_Norwegian_CI_AS")
+                .HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -156,10 +154,6 @@ namespace AAO_adminstrationspanel.Migrations
                     b.Property<DateTime?>("ExpirationDate")
                         .HasColumnType("date");
 
-                    b.Property<int?>("RoleId")
-                        .HasColumnType("int")
-                        .HasColumnName("RoleID");
-
                     b.Property<int?>("UserId")
                         .HasColumnType("int")
                         .HasColumnName("UserID");
@@ -167,8 +161,6 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("DriverLicenseTypeId");
-
-                    b.HasIndex("RoleId");
 
                     b.HasIndex("UserId");
 
@@ -207,7 +199,7 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnType("date");
 
                     b.HasKey("QualificationTypeId", "DriverId")
-                        .HasName("PK__DriverQu__370CC382BD444352");
+                        .HasName("PK__DriverQu__370CC382AD3C09EB");
 
                     b.HasIndex("DriverId");
 
@@ -263,25 +255,12 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnName("ID")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasMaxLength(255)
                         .IsUnicode(false)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("Role");
                 });
@@ -298,10 +277,6 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnType("int")
                         .HasColumnName("DepartmentID");
 
-                    b.Property<int?>("RoleId")
-                        .HasColumnType("int")
-                        .HasColumnName("RoleID");
-
                     b.Property<int?>("UserId")
                         .HasColumnType("int")
                         .HasColumnName("UserID");
@@ -309,8 +284,6 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
-
-                    b.HasIndex("RoleId");
 
                     b.HasIndex("UserId");
 
@@ -383,7 +356,7 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("TripId", "UserId")
-                        .HasName("PK__TripUser__80A4FDD414E23366");
+                        .HasName("PK__TripUser__80A4FDD410E8D8F1");
 
                     b.HasIndex("UserId");
 
@@ -406,7 +379,6 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnName("AddressID");
 
                     b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -438,12 +410,10 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnName("LoginID");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -470,8 +440,7 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -479,118 +448,9 @@ namespace AAO_adminstrationspanel.Migrations
 
                     b.HasIndex("LoginId");
 
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
                     b.HasIndex("RoleId");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetRoleClaims");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserClaims");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
-                {
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LoginProvider", "ProviderKey");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserLogins");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetUserRoles");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
-                {
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId", "LoginProvider", "Name");
-
-                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("AAO_adminstrationspanel.Models.Address", b =>
@@ -628,21 +488,14 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasOne("AAO_adminstrationspanel.Models.DriverLicenseType", "DriverLicenseType")
                         .WithMany("Drivers")
                         .HasForeignKey("DriverLicenseTypeId")
-                        .HasConstraintName("FK__Driver__DriverLi__45F365D3");
-
-                    b.HasOne("AAO_adminstrationspanel.Models.Role", "Role")
-                        .WithMany("Drivers")
-                        .HasForeignKey("RoleId")
-                        .HasConstraintName("FK__Driver__RoleID__440B1D61");
+                        .HasConstraintName("FK__Driver__DriverLi__440B1D61");
 
                     b.HasOne("AAO_adminstrationspanel.Models.User", "User")
                         .WithMany("Drivers")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__Driver__UserID__44FF419A");
+                        .HasConstraintName("FK__Driver__UserID__4316F928");
 
                     b.Navigation("DriverLicenseType");
-
-                    b.Navigation("Role");
 
                     b.Navigation("User");
                 });
@@ -652,13 +505,13 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasOne("AAO_adminstrationspanel.Models.Driver", "Driver")
                         .WithMany("DriverQualifications")
                         .HasForeignKey("DriverId")
-                        .HasConstraintName("FK__DriverQua__Drive__4BAC3F29")
+                        .HasConstraintName("FK__DriverQua__Drive__49C3F6B7")
                         .IsRequired();
 
                     b.HasOne("AAO_adminstrationspanel.Models.QualificationType", "QualificationType")
                         .WithMany("DriverQualifications")
                         .HasForeignKey("QualificationTypeId")
-                        .HasConstraintName("FK__DriverQua__Quali__4AB81AF0")
+                        .HasConstraintName("FK__DriverQua__Quali__48CFD27E")
                         .IsRequired();
 
                     b.Navigation("Driver");
@@ -671,21 +524,14 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasOne("AAO_adminstrationspanel.Models.Department", "Department")
                         .WithMany("Schedulers")
                         .HasForeignKey("DepartmentId")
-                        .HasConstraintName("FK__Scheduler__Depar__3F466844");
-
-                    b.HasOne("AAO_adminstrationspanel.Models.Role", "Role")
-                        .WithMany("Schedulers")
-                        .HasForeignKey("RoleId")
-                        .HasConstraintName("FK__Scheduler__RoleI__3D5E1FD2");
+                        .HasConstraintName("FK__Scheduler__Depar__3E52440B");
 
                     b.HasOne("AAO_adminstrationspanel.Models.User", "User")
                         .WithMany("Schedulers")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__Scheduler__UserI__3E52440B");
+                        .HasConstraintName("FK__Scheduler__UserI__3D5E1FD2");
 
                     b.Navigation("Department");
-
-                    b.Navigation("Role");
 
                     b.Navigation("User");
                 });
@@ -726,13 +572,13 @@ namespace AAO_adminstrationspanel.Migrations
                     b.HasOne("AAO_adminstrationspanel.Models.Trip", "Trip")
                         .WithMany("TripUsers")
                         .HasForeignKey("TripId")
-                        .HasConstraintName("FK__TripUser__TripID__4E88ABD4")
+                        .HasConstraintName("FK__TripUser__TripID__4CA06362")
                         .IsRequired();
 
                     b.HasOne("AAO_adminstrationspanel.Models.User", "User")
                         .WithMany("TripUsers")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__TripUser__UserID__4F7CD00D")
+                        .HasConstraintName("FK__TripUser__UserID__4D94879B")
                         .IsRequired();
 
                     b.Navigation("Trip");
@@ -762,57 +608,6 @@ namespace AAO_adminstrationspanel.Migrations
                     b.Navigation("Login");
 
                     b.Navigation("Role");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
-                {
-                    b.HasOne("AAO_adminstrationspanel.Models.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
-                {
-                    b.HasOne("AAO_adminstrationspanel.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
-                {
-                    b.HasOne("AAO_adminstrationspanel.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
-                {
-                    b.HasOne("AAO_adminstrationspanel.Models.Role", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AAO_adminstrationspanel.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
-                {
-                    b.HasOne("AAO_adminstrationspanel.Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("AAO_adminstrationspanel.Models.Address", b =>
@@ -865,10 +660,6 @@ namespace AAO_adminstrationspanel.Migrations
 
             modelBuilder.Entity("AAO_adminstrationspanel.Models.Role", b =>
                 {
-                    b.Navigation("Drivers");
-
-                    b.Navigation("Schedulers");
-
                     b.Navigation("Users");
                 });
 

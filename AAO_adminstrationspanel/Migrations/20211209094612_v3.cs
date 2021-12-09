@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AAO_adminstrationspanel.Migrations
 {
-    public partial class DBinit : Migration
+    public partial class v3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -67,9 +67,7 @@ namespace AAO_adminstrationspanel.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(255)", unicode: false, maxLength: 255, nullable: true),
-                    NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "varchar(255)", unicode: false, maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -95,27 +93,6 @@ namespace AAO_adminstrationspanel.Migrations
                         principalTable: "Country",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AspNetRoleClaims",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleId = table.Column<int>(type: "int", nullable: false),
-                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetRoleClaims_Role_RoleId",
-                        column: x => x.RoleId,
-                        principalTable: "Role",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -173,10 +150,10 @@ namespace AAO_adminstrationspanel.Migrations
                     RoleID = table.Column<int>(type: "int", nullable: true),
                     LoginID = table.Column<int>(type: "int", nullable: true),
                     AddressID = table.Column<int>(type: "int", nullable: true),
-                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "varchar(255)", unicode: false, maxLength: 255, nullable: true),
-                    NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -212,98 +189,12 @@ namespace AAO_adminstrationspanel.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AspNetUserClaims",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetUserClaims_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AspNetUserLogins",
-                columns: table => new
-                {
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
-                    table.ForeignKey(
-                        name: "FK_AspNetUserLogins_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AspNetUserRoles",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
-                    table.ForeignKey(
-                        name: "FK_AspNetUserRoles_Role_RoleId",
-                        column: x => x.RoleId,
-                        principalTable: "Role",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AspNetUserRoles_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AspNetUserTokens",
-                columns: table => new
-                {
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
-                    table.ForeignKey(
-                        name: "FK_AspNetUserTokens_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Driver",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ExpirationDate = table.Column<DateTime>(type: "date", nullable: true),
-                    RoleID = table.Column<int>(type: "int", nullable: true),
                     UserID = table.Column<int>(type: "int", nullable: true),
                     DriverLicenseTypeID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -311,19 +202,13 @@ namespace AAO_adminstrationspanel.Migrations
                 {
                     table.PrimaryKey("PK_Driver", x => x.ID);
                     table.ForeignKey(
-                        name: "FK__Driver__DriverLi__45F365D3",
+                        name: "FK__Driver__DriverLi__440B1D61",
                         column: x => x.DriverLicenseTypeID,
                         principalTable: "DriverLicenseType",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK__Driver__RoleID__440B1D61",
-                        column: x => x.RoleID,
-                        principalTable: "Role",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK__Driver__UserID__44FF419A",
+                        name: "FK__Driver__UserID__4316F928",
                         column: x => x.UserID,
                         principalTable: "User",
                         principalColumn: "ID",
@@ -336,7 +221,6 @@ namespace AAO_adminstrationspanel.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleID = table.Column<int>(type: "int", nullable: true),
                     UserID = table.Column<int>(type: "int", nullable: true),
                     DepartmentID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -344,19 +228,13 @@ namespace AAO_adminstrationspanel.Migrations
                 {
                     table.PrimaryKey("PK_Scheduler", x => x.ID);
                     table.ForeignKey(
-                        name: "FK__Scheduler__Depar__3F466844",
+                        name: "FK__Scheduler__Depar__3E52440B",
                         column: x => x.DepartmentID,
                         principalTable: "Department",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK__Scheduler__RoleI__3D5E1FD2",
-                        column: x => x.RoleID,
-                        principalTable: "Role",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK__Scheduler__UserI__3E52440B",
+                        name: "FK__Scheduler__UserI__3D5E1FD2",
                         column: x => x.UserID,
                         principalTable: "User",
                         principalColumn: "ID",
@@ -418,15 +296,15 @@ namespace AAO_adminstrationspanel.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__DriverQu__370CC382BD444352", x => new { x.QualificationTypeID, x.DriverID });
+                    table.PrimaryKey("PK__DriverQu__370CC382AD3C09EB", x => new { x.QualificationTypeID, x.DriverID });
                     table.ForeignKey(
-                        name: "FK__DriverQua__Drive__4BAC3F29",
+                        name: "FK__DriverQua__Drive__49C3F6B7",
                         column: x => x.DriverID,
                         principalTable: "Driver",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK__DriverQua__Quali__4AB81AF0",
+                        name: "FK__DriverQua__Quali__48CFD27E",
                         column: x => x.QualificationTypeID,
                         principalTable: "QualificationType",
                         principalColumn: "ID",
@@ -443,15 +321,15 @@ namespace AAO_adminstrationspanel.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__TripUser__80A4FDD414E23366", x => new { x.TripID, x.UserID });
+                    table.PrimaryKey("PK__TripUser__80A4FDD410E8D8F1", x => new { x.TripID, x.UserID });
                     table.ForeignKey(
-                        name: "FK__TripUser__TripID__4E88ABD4",
+                        name: "FK__TripUser__TripID__4CA06362",
                         column: x => x.TripID,
                         principalTable: "Trip",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK__TripUser__UserID__4F7CD00D",
+                        name: "FK__TripUser__UserID__4D94879B",
                         column: x => x.UserID,
                         principalTable: "User",
                         principalColumn: "ID",
@@ -462,26 +340,6 @@ namespace AAO_adminstrationspanel.Migrations
                 name: "IX_Address_CityID",
                 table: "Address",
                 column: "CityID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetRoleClaims_RoleId",
-                table: "AspNetRoleClaims",
-                column: "RoleId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUserClaims_UserId",
-                table: "AspNetUserClaims",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUserLogins_UserId",
-                table: "AspNetUserLogins",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AspNetUserRoles_RoleId",
-                table: "AspNetUserRoles",
-                column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_City_CountryID",
@@ -499,11 +357,6 @@ namespace AAO_adminstrationspanel.Migrations
                 column: "DriverLicenseTypeID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Driver_RoleID",
-                table: "Driver",
-                column: "RoleID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Driver_UserID",
                 table: "Driver",
                 column: "UserID");
@@ -514,21 +367,9 @@ namespace AAO_adminstrationspanel.Migrations
                 column: "DriverID");
 
             migrationBuilder.CreateIndex(
-                name: "RoleNameIndex",
-                table: "Role",
-                column: "NormalizedName",
-                unique: true,
-                filter: "[NormalizedName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Scheduler_DepartmentID",
                 table: "Scheduler",
                 column: "DepartmentID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Scheduler_RoleID",
-                table: "Scheduler",
-                column: "RoleID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Scheduler_UserID",
@@ -561,11 +402,6 @@ namespace AAO_adminstrationspanel.Migrations
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
-                name: "EmailIndex",
-                table: "User",
-                column: "NormalizedEmail");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_User_AddressID",
                 table: "User",
                 column: "AddressID");
@@ -579,32 +415,10 @@ namespace AAO_adminstrationspanel.Migrations
                 name: "IX_User_RoleID",
                 table: "User",
                 column: "RoleID");
-
-            migrationBuilder.CreateIndex(
-                name: "UserNameIndex",
-                table: "User",
-                column: "NormalizedUserName",
-                unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "AspNetRoleClaims");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserClaims");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserLogins");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserRoles");
-
-            migrationBuilder.DropTable(
-                name: "AspNetUserTokens");
-
             migrationBuilder.DropTable(
                 name: "DriverQualification");
 

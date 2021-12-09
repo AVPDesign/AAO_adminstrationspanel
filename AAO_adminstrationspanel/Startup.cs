@@ -46,9 +46,9 @@ namespace AAO_adminstrationspanel
                 options.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = true;
-            }).AddEntityFrameworkStores<AdminPanelAAO_dbContext>().AddDefaultTokenProviders().AddDefaultUI();
+            }).AddEntityFrameworkStores<uclweb_gr3Context>().AddDefaultTokenProviders().AddDefaultUI();
 
-            services.AddDbContext<AdminPanelAAO_dbContext>(cfg =>
+            services.AddDbContext<uclweb_gr3Context>(cfg =>
             {
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
