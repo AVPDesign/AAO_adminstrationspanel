@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AAO_adminstrationspanel.Migrations
 {
     [DbContext(typeof(uclweb_gr3Context))]
-    [Migration("20211209123139_fixedCityNameTypo")]
-    partial class fixedCityNameTypo
+    [Migration("20211209133158_dbinit")]
+    partial class dbinit
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -339,6 +339,7 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnName("StartCountryID");
 
                     b.Property<DateTime?>("StartDate")
+                        .IsRequired()
                         .HasColumnType("datetime");
 
                     b.Property<int?>("TravelTime")

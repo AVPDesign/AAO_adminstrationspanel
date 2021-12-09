@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AAO_adminstrationspanel.Migrations
 {
-    public partial class fixedCityNameTypo : Migration
+    public partial class dbinit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -355,7 +355,7 @@ namespace AAO_adminstrationspanel.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StartDate = table.Column<DateTime>(type: "datetime", nullable: true),
+                    StartDate = table.Column<DateTime>(type: "datetime", nullable: false),
                     EndDate = table.Column<DateTime>(type: "date", nullable: true),
                     Priority = table.Column<bool>(type: "bit", nullable: true),
                     TravelTime = table.Column<int>(type: "int", nullable: true),

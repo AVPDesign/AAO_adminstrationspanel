@@ -38,7 +38,7 @@ namespace AAO_adminstrationspanel.Models
             if (!optionsBuilder.IsConfigured)
             {
                //optionsBuilder.UseSqlServer("server=sql.insoft.dk;database=uclweb_gr3;user id=uclweb_gr3;password=Odense2021!;");
-               optionsBuilder.UseSqlServer("Server=DESKTOP-F290R19;Database=TESTAdminPanelAAO_db;Trusted_Connection=True;MultipleActiveResultSets=True");
+               //optionsBuilder.UseSqlServer("Server=DESKTOP-F290R19;Database=TESTAdminPanelAAO_db;Trusted_Connection=True;MultipleActiveResultSets=True");
             }
         }
 

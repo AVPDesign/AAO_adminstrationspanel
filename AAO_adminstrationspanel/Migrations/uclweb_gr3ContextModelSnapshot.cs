@@ -337,6 +337,7 @@ namespace AAO_adminstrationspanel.Migrations
                         .HasColumnName("StartCountryID");
 
                     b.Property<DateTime?>("StartDate")
+                        .IsRequired()
                         .HasColumnType("datetime");
 
                     b.Property<int?>("TravelTime")
