@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -13,6 +14,8 @@ namespace AAO_adminstrationspanel.Models
         }
 
         public int Id { get; set; }
+        [Required]
+        [Display(Name = "Startdato")]
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool? Priority { get; set; }

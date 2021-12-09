@@ -14,7 +14,7 @@ namespace AAO_adminstrationspanel.Models
 
         public int Id { get; set; }
         public string PostalCode { get; set; }
-        public string City1 { get; set; }
+        public string CityName { get; set; }
         public int? CountryId { get; set; }
 
         public virtual Country Country { get; set; }

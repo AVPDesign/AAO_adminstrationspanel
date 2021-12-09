@@ -73,7 +73,7 @@ namespace AAO_adminstrationspanel.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.City1)
+                entity.Property(e => e.CityName)
                     .HasMaxLength(100)
                     .IsUnicode(false)
                     .HasColumnName("City");
