@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace AAO_adminstrationspanel.Models
 {
-    public partial class User : IdentityUser
+    public partial class User : IdentityUser<int>
     {
         public User()
         {
@@ -16,7 +16,7 @@ namespace AAO_adminstrationspanel.Models
             Trips = new HashSet<Trip>();
         }
 
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         //public string Email { get; set; }

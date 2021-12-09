@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AAO_adminstrationspanel.Models
 {
-    public partial class uclweb_gr3Context : DbContext
+    public partial class uclweb_gr3Context : IdentityDbContext<User, Role, int>
     {
         public uclweb_gr3Context()
         {
@@ -26,23 +27,25 @@ namespace AAO_adminstrationspanel.Models
         public virtual DbSet<DriverQualification> DriverQualifications { get; set; }
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<QualificationType> QualificationTypes { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
+        //public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Scheduler> Schedulers { get; set; }
         public virtual DbSet<Trip> Trips { get; set; }
         public virtual DbSet<TripUser> TripUsers { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        //public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=sql.insoft.dk;database=uclweb_gr3;user id=uclweb_gr3;password=Odense2021!;");
+               //optionsBuilder.UseSqlServer("server=sql.insoft.dk;database=uclweb_gr3;user id=uclweb_gr3;password=Odense2021!;");
+               optionsBuilder.UseSqlServer("Server=DESKTOP-F290R19;Database=TESTAdminPanelAAO_db;Trusted_Connection=True;MultipleActiveResultSets=True");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
             modelBuilder.Entity<Address>(entity =>
