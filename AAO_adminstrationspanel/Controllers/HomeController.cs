@@ -51,7 +51,8 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult AlleTure()
         {
-            return View();
+            IEnumerable<Trip> trips = _db.Trips;
+            return View(trips);
         }
 
         public IActionResult TildelteTure()
