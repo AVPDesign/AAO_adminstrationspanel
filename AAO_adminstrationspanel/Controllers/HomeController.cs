@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AAO_adminstrationspanel.Models;
-using Mvc_join_multiple_tables_in_Singe_Models;
 
 namespace AAO_adminstrationspanel.Controllers
 {
@@ -58,14 +57,9 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult TildelteTure()
         {
-            SampleDBEntities sd = 
+            IEnumerable<TripUser> tripuser = _db.TripUsers;
+            return View(tripuser);
         }
-
-        //public IActionResult TildelteTure()
-        //{
-        //    IEnumerable<TripUser> tripuser = _db.TripUsers;
-        //    return View(tripuser);
-        //}
 
         public IActionResult AfloserOversigt()
         {

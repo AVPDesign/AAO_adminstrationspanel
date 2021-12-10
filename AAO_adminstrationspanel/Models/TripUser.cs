@@ -15,6 +15,10 @@ namespace AAO_adminstrationspanel.Models
         public virtual User User { get; set; }
     }
 
+    public partial class test
+    {
+
+    }
 }
 
 
