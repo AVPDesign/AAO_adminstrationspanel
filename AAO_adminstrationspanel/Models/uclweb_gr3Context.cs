@@ -29,7 +29,7 @@ namespace AAO_adminstrationspanel.Models
         public virtual DbSet<QualificationType> QualificationTypes { get; set; }
         //public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Scheduler> Schedulers { get; set; }
-        public virtual DbSet<Trip> Trips { get; set; }
+        public virtual DbSet<Trip> TripUser { get; set; }
         public virtual DbSet<TripUser> TripUsers { get; set; }
         //public virtual DbSet<User> Users { get; set; }
 

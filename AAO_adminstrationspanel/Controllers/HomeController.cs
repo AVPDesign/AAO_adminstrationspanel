@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AAO_adminstrationspanel.Models;
+using AAO_adminstrationspanel.ViewModels;
 
 namespace AAO_adminstrationspanel.Controllers
 {
@@ -55,13 +56,77 @@ namespace AAO_adminstrationspanel.Controllers
             return View(trips);
         }
 
+        //public IActionResult TildelteTure()
+        //{
+        //    IEnumerable<TripUser> tripuser = _db.TripUsers;
+        //    return View(tripuser);
+        //}
+
         public IActionResult TildelteTure()
         {
-            IEnumerable<TripUser> tripuser = _db.TripUsers;
-            return View(tripuser);
+            var result =
+            (from trip in _db.Trips
+             join Department in _db.Departments
+             on trip.Id equals Department.Id
+
+             join Country in _db.Countries
+             on trip.StartCountry equals Country.Id
+
+             join user in _db.Users
+             on 
+
+
+             select new AssignedTripsVM
+                {
+                    // Trip
+                    TripId = trip.Id,
+                    StartDate = trip.StartDate,
+                    EndDate = trip.EndDate,
+                    Priority = trip.Priority,
+                    TravelTime = trip.TravelTime,
+                    Description = trip.Description,
+                    ContactId = trip.ContactId,
+                    DepartmentId = trip.DepartmentId,
+                    StartCountryId = trip.StartCountryId,
+                    EndCountryId = trip.EndCountryId,
+
+                    // Department
+                    DepartmentId = department.Id,
+                    DepartmentName = department.Name,
+                    DepartmentCVR = department.CVR,
+                    DepartmentPhone = department.Phone,
+                    DepartmentFax = department.fax,
+                    DepartmentAddressId = Department.addressId,
+
+                    // Country
+                    CountryId = country.id,
+                    CountryCode = country.CountryCode,
+                    Country1 = country.Country1,
+
+                    // TripUser
+                    TripId = TripUser.tripId,
+                    UserId = TripUser.userId
+
+                    // User
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Phone = user.Phone,
+                    RoleId = user.RoleId,
+                    LoginId = user.LoginId,
+                    AddressId = user.AddressId,
+
+                    // Driver
+                    DriverId = driver.Id,
+                    ExpirationDate = driver.ExpirationDate,
+                    UserId = driver.UserId,
+                    DriverLicenseTypeId = driver.DriverLicenseTypeId,
+
+    }).ToList();
+
+        return View(result);
         }
 
-        public IActionResult AfloserOversigt()
+    public IActionResult AfloserOversigt()
         {
             IEnumerable<User> users = _db.Users;
             return View(users);
