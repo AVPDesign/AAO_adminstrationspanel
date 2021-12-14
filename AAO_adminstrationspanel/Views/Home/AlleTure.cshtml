@@ -1,7 +1,18 @@
-﻿@{
+﻿@model List<AAO_adminstrationspanel.ViewModels.TripUserDriverVM>
+@{
     ViewData["Title"] = "Alle Ture";
 }
 <h1>@ViewData["Title"]</h1>
+@if(Model.Count()>0){
+
+    foreach (var item in Model)
+    {
+
+    }
+
+}   else {
+    <p>Frugtig fugt</p>
+}
 <div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -665,15 +676,15 @@
         <p class="pageNumber">10</p>
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" /></svg>
     </div>
-        <form class="pageView">
-            <label>Vis:</label>
-            <select>
-                <option value="5">5 rækker</option>
-                <option value="10" selected>10 rækker</option>
-                <option value="15">15 rækker</option>
-                <option value="20">20 rækker</option>
-                <option value="25">25 rækker</option>
-                <option value="30">30 rækker</option>
-            </select>
-        </form>
+    <form class="pageView">
+        <label>Vis:</label>
+        <select>
+            <option value="5">5 rækker</option>
+            <option value="10" selected>10 rækker</option>
+            <option value="15">15 rækker</option>
+            <option value="20">20 rækker</option>
+            <option value="25">25 rækker</option>
+            <option value="30">30 rækker</option>
+        </select>
+    </form>
 </div>

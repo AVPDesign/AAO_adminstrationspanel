@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AAO_adminstrationspanel.Models;
+using AAO_adminstrationspanel.ViewModels;
 
 namespace AAO_adminstrationspanel.Controllers
 {
@@ -51,7 +52,45 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult AlleTure()
         {
-            return View();
+            var result =
+                (from trip in _db.Trips
+                 join tripUser in _db.TripUsers
+                 on trip.Id equals tripUser.TripId
+                 join user in _db.Users
+                 on tripUser.UserId equals user.Id
+                 join driver in _db.Drivers
+                 on user.Id equals driver.UserId
+                 select new TripUserDriverVM
+                 {
+                     // Trip
+                     TripId = trip.Id,
+                     StartDate = trip.StartDate,
+                     EndDate = trip.EndDate,
+                     Priority = trip.Priority,
+                     TravelTime = trip.TravelTime,
+                     Description = trip.Description,
+                     ContactId = trip.ContactId,
+                     DepartmentId = trip.DepartmentId,
+                     StartCountryId = trip.StartCountryId,
+                     EndCountryId = trip.EndCountryId,
+
+                     // User
+                     FirstName = user.FirstName,
+                     LastName = user.LastName,
+                     Phone = user.Phone,
+                     RoleId = user.RoleId,
+                     LoginId = user.LoginId,
+                     AddressId = user.AddressId,
+
+                     // Driver
+                     DriverId = driver.Id,
+                     ExpirationDate = driver.ExpirationDate,
+                     UserId = driver.UserId,
+                     DriverLicenseTypeId = driver.DriverLicenseTypeId
+
+                 }).ToList();
+
+            return View(result);
         }
 
         public IActionResult TildelteTure()
@@ -64,5 +103,6 @@ namespace AAO_adminstrationspanel.Controllers
             IEnumerable<User> users = _db.Users;
             return View(users);
         }
+
     }
 }
