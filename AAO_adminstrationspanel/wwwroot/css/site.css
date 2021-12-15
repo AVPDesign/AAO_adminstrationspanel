@@ -88,6 +88,11 @@ nav-item a {
     margin: 0px 0px 20px 0px;
 }
 
+.col-2{
+    height: auto;
+}
+
+
 /* Image styles
 -------------------------------------------------- */
 .img_logo {
@@ -283,7 +288,8 @@ table tr {
 .columnHeading {
     border: 0;
     font-weight: bold;
-    text-align: center;
+    padding: 0 25px;
+    text-align: left;
 }
 
 .headingLeft {
@@ -329,6 +335,10 @@ table tr {
 
 .replacementOverview .expandRow.expandLess {
     background: var(--aao-green-trans);
+}
+
+.expandRow td{
+    padding: 0 25px;
 }
 
 .expandLess .expandArrow {
@@ -380,6 +390,10 @@ table tr {
 
 .tripInformation > tbody > tr:first-child {
     border: none;
+}
+
+.tripInformation > tbody > tr:nth-child(2) > td {
+    padding: 25px;
 }
 
 .driverInformationTable > tbody > tr:first-child {
