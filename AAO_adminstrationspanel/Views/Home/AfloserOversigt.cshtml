@@ -1,8 +1,16 @@
-﻿@model IEnumerable<AAO_adminstrationspanel.Models.User>
+﻿@model List<AAO_adminstrationspanel.ViewModels.TripUserDriverQualificationLicenseVM>
 @{
     ViewData["Title"] = "Afløser Oversigt";
 }
 <h1>@ViewData["Title"]</h1>
+@if (Model.Count() > 0)
+{
+    <p>Fugtig frugt</p>
+}
+else
+{
+    <p>Frugtig fugt</p>
+}
 <div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -503,15 +511,3 @@
         </select>
     </form>
 </div>
-<p>@Model</p>
-@if (Model.Count() > 0)
-{
-    foreach (var user in Model)
-    {
-        <p>@user.Email</p>
-    }
-}
-else
-{
-    <p>Ingen users :(</p>
-}
