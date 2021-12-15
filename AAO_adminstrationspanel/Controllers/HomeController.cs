@@ -52,6 +52,9 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult AlleTure()
         {
+            IEnumerable<Trip> trips = _db.Trips;
+            return View(trips);
+
             var result =
                 (from trip in _db.Trips
                  join tripUser in _db.TripUsers
@@ -93,12 +96,91 @@ namespace AAO_adminstrationspanel.Controllers
             return View(result);
         }
 
+        //public IActionResult TildelteTure()
+        //{
+        //    IEnumerable<TripUser> tripuser = _db.TripUsers;
+        //    return View(tripuser);
+        //}
+
         public IActionResult TildelteTure()
         {
-            return View();
+            var result =
+            (from department in _db.Departments
+
+             join trip in _db.Trips
+             on department.Id equals trip.DepartmentId
+
+             join country in _db.Countries
+             on trip.StartCountryId equals country.Id
+
+             join endCountry in _db.Countries
+             on trip.EndCountryId equals endCountry.Id
+
+             join tripUser in _db.TripUsers
+             on trip.Id equals tripUser.TripId
+
+             join user in _db.Users
+             on tripUser.UserId equals user.Id
+
+             join driver in _db.Drivers
+             on user.Id equals driver.UserId
+
+
+             select new AssignedTripsVM
+                {
+                     // Department
+                     DepartmentId = department.Id,
+                     Name = department.Name,
+                     Cvr = department.Cvr,
+                     DepartmentPhone = department.Phone,
+                     Fax = department.Fax,
+                     DepartmentAddressId = department.AddressId,
+
+                     // Trip
+                     TripId = trip.Id,
+                    StartDate = trip.StartDate,
+                    EndDate = trip.EndDate,
+                    Priority = trip.Priority,
+                    TravelTime = trip.TravelTime,
+                    Description = trip.Description,
+                    ContactId = trip.ContactId,
+                    //DepartmentId = trip.DepartmentId,
+                    StartCountryId = trip.StartCountryId,
+                    EndCountryId = trip.EndCountryId,
+
+                    // Country
+                    Id = country.Id,
+                    CountryCode = country.CountryCode,
+                    StartCountryCode = country.CountryCode,
+
+                    EndCountryCode = endCountry.CountryCode,
+
+                    // TripUser
+                    //TripId = tripUser.TripId,
+                    UserId = tripUser.UserId,
+
+                 // User
+                 FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Phone = user.Phone,
+                    RoleId = user.RoleId,
+                    LoginId = user.LoginId,
+                    AddressId = user.AddressId,
+
+                    // Driver
+                    DriverId = driver.Id,
+                    ExpirationDate = driver.ExpirationDate,
+                    //UserId = driver.UserId,
+                    DriverLicenseTypeId = driver.DriverLicenseTypeId,
+
+             }).ToList();
+
+            
+
+        return View(result);
         }
 
-        public IActionResult AfloserOversigt()
+    public IActionResult AfloserOversigt()
         {
             var result =
                 (from trip in _db.Trips
