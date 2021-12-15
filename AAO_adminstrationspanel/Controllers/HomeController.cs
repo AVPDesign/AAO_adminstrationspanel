@@ -65,50 +65,62 @@ namespace AAO_adminstrationspanel.Controllers
         public IActionResult TildelteTure()
         {
             var result =
-            (from trip in _db.Trips
-             join Department in _db.Departments
-             on trip.Id equals Department.Id
+            (from department in _db.Departments
 
-             join Country in _db.Countries
-             on trip.StartCountry equals Country.Id
+             join trip in _db.Trips
+             on department.Id equals trip.DepartmentId
+
+             join country in _db.Countries
+             on trip.StartCountryId equals country.Id
+
+             join endCountry in _db.Countries
+             on trip.EndCountryId equals endCountry.Id
+
+             join tripUser in _db.TripUsers
+             on trip.Id equals tripUser.TripId
 
              join user in _db.Users
-             on 
+             on tripUser.UserId equals user.Id
+
+             join driver in _db.Drivers
+             on user.Id equals driver.UserId
 
 
              select new AssignedTripsVM
                 {
-                    // Trip
-                    TripId = trip.Id,
+                     // Department
+                     DepartmentId = department.Id,
+                     Name = department.Name,
+                     Cvr = department.Cvr,
+                     DepartmentPhone = department.Phone,
+                     Fax = department.Fax,
+                     DepartmentAddressId = department.AddressId,
+
+                     // Trip
+                     TripId = trip.Id,
                     StartDate = trip.StartDate,
                     EndDate = trip.EndDate,
                     Priority = trip.Priority,
                     TravelTime = trip.TravelTime,
                     Description = trip.Description,
                     ContactId = trip.ContactId,
-                    DepartmentId = trip.DepartmentId,
+                    //DepartmentId = trip.DepartmentId,
                     StartCountryId = trip.StartCountryId,
                     EndCountryId = trip.EndCountryId,
 
-                    // Department
-                    DepartmentId = department.Id,
-                    DepartmentName = department.Name,
-                    DepartmentCVR = department.CVR,
-                    DepartmentPhone = department.Phone,
-                    DepartmentFax = department.fax,
-                    DepartmentAddressId = Department.addressId,
-
                     // Country
-                    CountryId = country.id,
+                    Id = country.Id,
                     CountryCode = country.CountryCode,
-                    Country1 = country.Country1,
+                    StartCountryCode = country.CountryCode,
+
+                    EndCountryCode = endCountry.CountryCode,
 
                     // TripUser
-                    TripId = TripUser.tripId,
-                    UserId = TripUser.userId
+                    //TripId = tripUser.TripId,
+                    UserId = tripUser.UserId,
 
-                    // User
-                    FirstName = user.FirstName,
+                 // User
+                 FirstName = user.FirstName,
                     LastName = user.LastName,
                     Phone = user.Phone,
                     RoleId = user.RoleId,
@@ -118,10 +130,12 @@ namespace AAO_adminstrationspanel.Controllers
                     // Driver
                     DriverId = driver.Id,
                     ExpirationDate = driver.ExpirationDate,
-                    UserId = driver.UserId,
+                    //UserId = driver.UserId,
                     DriverLicenseTypeId = driver.DriverLicenseTypeId,
 
-    }).ToList();
+             }).ToList();
+
+            
 
         return View(result);
         }

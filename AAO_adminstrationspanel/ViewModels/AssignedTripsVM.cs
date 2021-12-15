@@ -7,6 +7,14 @@ namespace AAO_adminstrationspanel.ViewModels
 {
     public class AssignedTripsVM
     {
+        // Department
+        public int DepartmentId { get; set; }
+        public string Name { get; set; }
+        public string Cvr { get; set; }
+        public string DepartmentPhone { get; set; }
+        public string Fax { get; set; }
+        public int? DepartmentAddressId { get; set; }
+
         // Trip
         public int TripId { get; set; }
         public DateTime? StartDate { get; set; }
@@ -15,40 +23,34 @@ namespace AAO_adminstrationspanel.ViewModels
         public int? TravelTime { get; set; }
         public string Description { get; set; }
         public int? ContactId { get; set; }
-        public int? DepartmentId { get; set; }
         public int? StartCountryId { get; set; }
         public int? EndCountryId { get; set; }
 
-        // Country
+        // Country 
         public int Id { get; set; }
         public string CountryCode { get; set; }
         public string Country1 { get; set; }
+        // start- end country
+        public string StartCountryCode { get; set; }
+        public string EndCountryCode { get; set; }
 
-        // Department
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Cvr { get; set; }
-        public string Phone { get; set; }
-        public string Fax { get; set; }
-        public int? AddressId { get; set; }
-
-        //// TripUser
+        // TripUser
         //public int TripId { get; set; }
-        //public int UserId { get; set; }
-        //public bool? Assigned { get; set; }
+        public int UserId { get; set; }
+        public bool? Assigned { get; set; }
 
         // User
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string DepartmentPhone { get; set; }
+        public string Phone { get; set; }
         public int? RoleId { get; set; }
         public int? LoginId { get; set; }
-        public int? DepartmentAddressId { get; set; }
+        public int? AddressId { get; set; }
 
         // Driver
         public int DriverId { get; set; }
         public DateTime? ExpirationDate { get; set; }
-        public int? UserId { get; set; }
+        //public int? UserId { get; set; }
         public int? DriverLicenseTypeId { get; set; }
 
     }
