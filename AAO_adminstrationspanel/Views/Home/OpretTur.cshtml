@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="input">
-                    <label for="EndDate">Slutdato</label>
+                    <label asp-for="EndDate"></label>
                     <input asp-for="EndDate" id="EndDate">
                 </div>
 
@@ -31,8 +31,8 @@
                 <div class="flex, collumn3">
 
                     <div class="input">
-                        <label for="Duration">Varighed</label>
-                        <input type="number" name="Duration" id="Duration">
+                        <label asp-for="TravelTime"></label>
+                        <input asp-for="TravelTime" id="Duration">
                     </div>
 
                     <div class="input">
@@ -55,7 +55,7 @@
                         <div class="flex">
 
                             <div class="input">
-                                <label for="TrafficFrom">Trafik fra</label>
+                                <label asp-for="StartCountryId"></label>
                                 <select id="TrafficFrom">
                                     <option>DK</option>
                                     <option>SE</option>
@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="input">
-                                <label for="TrafficTo">Trafik til</label>
+                                <label asp-for="EndCountryId"></label>
                                 <select id="TrafficTo">
                                     <option>DK</option>
                                     <option>SE</option>
@@ -87,12 +87,12 @@
                     <div class="collumn4">
 
                         <div class="input">
-                            <label for="Contact">Kontakt</label>
+                            <label asp-for="ContactId"></label>
                             <input type="text" name="Contact" id="Contact">
                         </div>
 
                         <div class="input">
-                            <label for="Department">Afdeling</label>
+                            <label asp-for="DepartmentId"></label>
                             <select id="Department">
                                 <option>Odense</option>
                                 <option>Aarhus</option>
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="input">
-                    <label for="Description">Beskrivelse</label>
+                    <label asp-for="Description"></label>
                     <input type="text" name="Description" id="Description">
                 </div>
 
@@ -115,8 +115,11 @@
         <div class="flex">
 
             <div>
-                <label for="Urgent">Hastetur</label>
-                <input type="checkbox" name="Urgent" id="Urgent">
+                <label asp-for="Priority"></label>
+                <input asp-for="Priority" id="Urgent">
+
+                @*<label for="Urgent">Hastetur</label>
+                <input type="checkbox" name="Urgent" id="Urgent">*@
             </div>
 
             <button>Opret tur</button>

@@ -1,8 +1,18 @@
-﻿@model IEnumerable<AAO_adminstrationspanel.Models.Trip>
+﻿@model List<AAO_adminstrationspanel.ViewModels.TripUserDriverVM>
 @{
     ViewData["Title"] = "Alle Ture";
 }
 <h1>@ViewData["Title"]</h1>
+@if(Model.Count()>0){
+
+    foreach (var item in Model)
+    {
+
+    }
+
+}   else {
+    <p>Frugtig fugt</p>
+}
 <div class="dropdownNavigation">
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
