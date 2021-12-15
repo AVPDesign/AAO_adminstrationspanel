@@ -88,16 +88,16 @@ namespace AAO_adminstrationspanel.Controllers
 
              select new AssignedTripsVM
                 {
-                     // Department
-                     DepartmentId = department.Id,
-                     Name = department.Name,
-                     Cvr = department.Cvr,
-                     DepartmentPhone = department.Phone,
-                     Fax = department.Fax,
-                     DepartmentAddressId = department.AddressId,
+                    // Department
+                    DepartmentId = department.Id,
+                    Name = department.Name,
+                    Cvr = department.Cvr,
+                    DepartmentPhone = department.Phone,
+                    Fax = department.Fax,
+                    DepartmentAddressId = department.AddressId,
 
-                     // Trip
-                     TripId = trip.Id,
+                    // Trip
+                    TripId = trip.Id,
                     StartDate = trip.StartDate,
                     EndDate = trip.EndDate,
                     Priority = trip.Priority,
@@ -119,8 +119,8 @@ namespace AAO_adminstrationspanel.Controllers
                     //TripId = tripUser.TripId,
                     UserId = tripUser.UserId,
 
-                 // User
-                 FirstName = user.FirstName,
+                    // User
+                    FirstName = user.FirstName,
                     LastName = user.LastName,
                     Phone = user.Phone,
                     RoleId = user.RoleId,
