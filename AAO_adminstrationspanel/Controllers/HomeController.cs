@@ -100,8 +100,66 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult AfloserOversigt()
         {
-            IEnumerable<User> users = _db.Users;
-            return View(users);
+            var result =
+                (from trip in _db.Trips
+                 join tripUser in _db.TripUsers
+                 on trip.Id equals tripUser.TripId
+
+                 join user in _db.Users
+                 on tripUser.UserId equals user.Id
+
+                 join driver in _db.Drivers
+                 on user.Id equals driver.UserId
+
+                 join driverlicensetype in _db.DriverLicenseTypes
+                 on driver.DriverLicenseTypeId equals driverlicensetype.Id
+
+                 join driverqualification in _db.DriverQualifications
+                 on driver.Id equals driverqualification.DriverId
+
+                 join qualificationtype in _db.QualificationTypes
+                 on driverqualification.QualificationTypeId equals qualificationtype.Id
+
+                 select new TripUserDriverQualificationLicenseVM
+                 {
+                     // Trip
+                     TripId = trip.Id,
+                     StartDate = trip.StartDate,
+                     EndDate = trip.EndDate,
+                     Priority = trip.Priority,
+                     TravelTime = trip.TravelTime,
+                     Description = trip.Description,
+                     ContactId = trip.ContactId,
+                     DepartmentId = trip.DepartmentId,
+                     StartCountryId = trip.StartCountryId,
+                     EndCountryId = trip.EndCountryId,
+
+                     // User
+                     FirstName = user.FirstName,
+                     LastName = user.LastName,
+                     Phone = user.Phone,
+                     RoleId = user.RoleId,
+                     LoginId = user.LoginId,
+                     AddressId = user.AddressId,
+
+                     // Driver
+                     DriverId = driver.Id,
+                     LicenseExpirationDate = driver.ExpirationDate,
+                     UserId = driver.UserId,
+
+                     // DriverLicenseType
+                     LicenseId = driverlicensetype.Id,
+                     LicenseName = driverlicensetype.Name,
+                     
+                     // DriverQualification
+                     ExpirationDate = driverqualification.ExpirationDate,
+
+                     // QualificationType
+                     QualificationId = qualificationtype.Id,
+                     QualificationName = qualificationtype.Name,
+
+                 }).ToList();
+            return View(result);
         }
 
     }
