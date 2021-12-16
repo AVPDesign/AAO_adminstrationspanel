@@ -362,13 +362,17 @@ table tr {
 .buttonTripNavigation {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
 }
 
-.buttonNavigationTrip {
+/*.buttonNavigationTrip {
     display: flex;
-    justify-content: space-between;
-    width: 47.5%;
+    justify-content: space-evenly;
+    width: 50%;
+}*/
+
+.buttonNavigationTrip button:first-child {
+    margin-right: 25px;
 }
 
 .tableToOpenContainer > table > tbody {
