@@ -564,6 +564,7 @@ input, select {
 
 .top-bar {
     float: right;
+    margin-right: 80px;
 }
 
 .login {
