@@ -23,8 +23,9 @@ namespace AAO_adminstrationspanel.Models
         [Display(Name = "Slutdato")]
         public DateTime? EndDate { get; set; }
 
-        [Display(Name = "Hastetur")]
-        public bool? Priority { get; set; }
+        [Display(Name = "Hastetur!")]
+        //[Range(typeof(bool), "true", "true", ErrorMessage = "You gotta tick the box!")]
+        public bool Priority { get; set; }
 
         [Required]
         [Display(Name = "Varighed")]

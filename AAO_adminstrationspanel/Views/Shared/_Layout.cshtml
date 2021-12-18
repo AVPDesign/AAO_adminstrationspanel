@@ -12,6 +12,7 @@
 <body>
         <div class="container-fluid">
             <div class="row">
+
                 <div class="col-2 box-shadow vh-100">
                     <img src="~/image/axlogo.png" class="img_logo d-flex justify-content-center" />
                     <div class="logo_text">Alex Andersen</div>
@@ -28,7 +29,6 @@
                                 <div class="col-2">
                                     <div class="arrow"><img src="~/image/icon/arrow.svg"></div>
                                 </div>
-                                <partial name="_LoginPartial" />
                             </div>
                         </div>
                         <div class="container">
@@ -65,7 +65,7 @@
                                 <div class="col-10">
                                     <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="OpretTur">Opret Tur</a>
                                 </div>
-                              
+
                             </div>
                         </div>
                         <div class="container">
@@ -77,18 +77,22 @@
                                     <a class="nav-link">Minimere menu</a>
                                 </div>
                                 @*<div class="col-2">
-                                    <div class="arrow"><img src="~/image/icon/arrow-left.svg" class="img-arrow" /></div>
-                                </div>*@
+                            <div class="arrow"><img src="~/image/icon/arrow-left.svg" class="img-arrow" /></div>
+                        </div>*@
                             </div>
                         </div>
                     </nav>
                 </div>
 
                 <div class="col-10 pl-5">
+                    <div class="top-bar">
+                        <partial name="_LoginPartial" />
+                    </div>
                     <main role="main" class="main">
                         @RenderBody()
                     </main>
                 </div>
+
             </div>
         </div>
 

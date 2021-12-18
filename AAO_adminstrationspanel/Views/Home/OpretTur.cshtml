@@ -28,7 +28,7 @@
                     <input type="time" name="StartTime" id="StartTime">
                 </div>
 
-                <div class="flex, collumn3">
+                <div class="flex collumn3">
 
                     <div class="input">
                         <label asp-for="TravelTime"></label>
@@ -112,17 +112,14 @@
 
         </div>
 
-        <div class="flex">
+        <div class="flex float-right">
 
             <div>
                 <label asp-for="Priority"></label>
                 <input asp-for="Priority" id="Urgent">
-
-                @*<label for="Urgent">Hastetur</label>
-                <input type="checkbox" name="Urgent" id="Urgent">*@
             </div>
 
-            <button type="submit">Opret tur</button>
+            <button class="submit-button" type="submit">Opret tur</button>
         
         </div>
 

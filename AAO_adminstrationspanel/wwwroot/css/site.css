@@ -512,11 +512,12 @@ input, select {
 }
 
 #Duration {
-    width: 50%;
+    width: 100%;
 }
 
 #DaysOrHours {
-    width: 30%;
+    width: 60%;
+    margin-top: 32px;
 }
 
 #TrafficTo {
@@ -530,4 +531,53 @@ input, select {
 #Description {
     width: 90%;
     height: 123px;
+}
+
+#Urgent {
+    border-color: red;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+}
+
+.submit-button {
+    background-color: #00904A;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    margin: 32px 100px 0 0;
+    /*margin: 32px 26.666% 0 0;*/
+}
+
+/* CSS for login/out */
+
+.top-bar {
+    float: right;
+}
+
+.login {
+    display: flex;
+}
+
+.setting {
+    background-color: #00904A;
+    color: white;
+    height: 60px;
+    padding: 16px;
+    border-radius: 0 0 0 5px;
+}
+
+.log-in-out {
+    background-color: darkgreen;
+    color: white;
+    height: 60px;
+    padding: 16px;
+    border-radius: 0 0 5px 0;
+}
+
+.white-text {
+    color: white;
 }
