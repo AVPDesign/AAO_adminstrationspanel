@@ -396,12 +396,12 @@ table tr {
     border: none;
 }
 
-.tripInformation > tbody > tr:nth-child(2) > td {
-    padding: 25px;
-}
-
 .driverInformationTable > tbody > tr:first-child {
     border: none;
+}
+
+.tripInformation > tbody > tr:nth-child(2) > td {
+    padding: 25px;
 }
 
 .moreInformation {
