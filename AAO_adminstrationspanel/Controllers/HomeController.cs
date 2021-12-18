@@ -52,8 +52,6 @@ namespace AAO_adminstrationspanel.Controllers
 
         public IActionResult AlleTure()
         {
-            IEnumerable<Trip> trips = _db.Trips;
-            return View(trips);
 
             var result =
                 (from trip in _db.Trips
@@ -96,11 +94,6 @@ namespace AAO_adminstrationspanel.Controllers
             return View(result);
         }
 
-        //public IActionResult TildelteTure()
-        //{
-        //    IEnumerable<TripUser> tripuser = _db.TripUsers;
-        //    return View(tripuser);
-        //}
 
         public IActionResult TildelteTure()
         {
@@ -220,6 +213,7 @@ namespace AAO_adminstrationspanel.Controllers
                      FirstName = user.FirstName,
                      LastName = user.LastName,
                      Phone = user.Phone,
+                     Email = user.Email,
                      RoleId = user.RoleId,
                      LoginId = user.LoginId,
                      AddressId = user.AddressId,

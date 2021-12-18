@@ -82,7 +82,7 @@ namespace AAO_adminstrationspanel
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=AlleTure}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
