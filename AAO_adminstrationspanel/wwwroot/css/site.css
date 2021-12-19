@@ -391,6 +391,10 @@ table tr {
     padding: 0 25px;
 }
 
+.tableToOpenContainer > table > tbody > tr:nth-child(2n) {
+    height:fit-content;
+}
+
 .checkboxTd > input {
     margin: 0;
     position: relative;
